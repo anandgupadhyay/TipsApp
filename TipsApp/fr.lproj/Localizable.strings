@@ -1,0 +1,124 @@
+// MARK: - General
+"app_name" = "TipsApp";
+"done" = "Terminé";
+"cancel" = "Annuler";
+"save" = "Enregistrer";
+"edit" = "Modifier";
+"delete" = "Supprimer";
+"share" = "Partager";
+"ok" = "OK";
+"reset" = "Réinitialiser";
+
+// MARK: - Calculator
+"tip_calculator" = "Calculateur de Pourboire";
+"smart_tip_calculator" = "Calculateur de Pourboire Intelligent";
+"calculate_tips_description" = "Calculez les pourboires selon la qualité du service et divisez facilement les factures";
+"bill_amount" = "Montant de la Facture";
+"tip_percentage" = "Pourcentage de Pourboire";
+"quick_tip_options" = "Options de Pourboire Rapide";
+"custom_amount" = "Montant Personnalisé";
+"enter_amount" = "Entrez le montant";
+"service_experience" = "Expérience de Service";
+"number_of_people" = "Nombre de Personnes";
+"payment_method" = "Méthode de Paiement";
+"calculation_results" = "Résultats du Calcul";
+"tip_amount" = "Montant du Pourboire";
+"total_amount" = "Montant Total";
+"per_person" = "Par Personne";
+"notes_optional" = "Notes (Optionnel)";
+"add_notes_placeholder" = "Ajoutez des notes sur le service...";
+"add_tip" = "Ajouter un Pourboire";
+"update_tip" = "Mettre à Jour le Pourboire";
+
+// MARK: - Experience
+"excellent" = "Excellent";
+"good" = "Bon";
+"average" = "Moyen";
+"poor" = "Mauvais";
+
+// MARK: - Payment Methods
+"cash" = "Espèces";
+"credit_card" = "Carte de Crédit";
+"debit_card" = "Carte de Débit";
+"qr_code" = "Code QR";
+"digital_wallet" = "Portefeuille Numérique";
+
+// MARK: - History
+"tip_history" = "Historique des Pourboires";
+"search_calculations" = "Rechercher des calculs...";
+"no_calculations_found" = "Aucun Calcul Trouvé";
+"calculations_history_description" = "Vos calculs de pourboire apparaîtront ici une fois sauvegardés.";
+"start_calculating" = "Commencer à Calculer";
+"filter_all" = "Tout";
+"filter_today" = "Aujourd'hui";
+"filter_this_week" = "Cette Semaine";
+"filter_this_month" = "Ce Mois";
+"total_tips_paid" = "Total des Pourboires Payés";
+
+// MARK: - Success Alert
+"tip_saved" = "Pourboire Sauvegardé !";
+"tip_saved_message" = "Votre pourboire a été sauvegardé avec succès. Vous pouvez le voir dans l'historique.";
+"view_history" = "Voir l'Historique";
+"new_tip" = "Nouveau Pourboire";
+
+// MARK: - Detail View
+"calculation_details" = "Détails du Calcul";
+"calculation_breakdown" = "Détail du Calcul";
+"service_details" = "Détails du Service";
+"payment_information" = "Informations de Paiement";
+"custom_tip_amount" = "Montant de Pourboire Personnalisé";
+"service_experience_label" = "Expérience de Service";
+"payment_method_label" = "Méthode de Paiement";
+"split_between" = "Divisé Entre";
+"person" = "personne";
+"persons" = "personnes";
+"edit_calculation" = "Modifier le Calcul";
+
+// MARK: - Share
+"share_calculation" = "Partager le Calcul";
+"share_preview" = "Aperçu du Partage";
+"share_options" = "Options de Partage";
+"export_options" = "Options d'Export";
+"copy_to_clipboard" = "Copier dans le Presse-papiers";
+"copy_calculation_details" = "Copier les détails du calcul";
+"share_via_message" = "Partager via Message";
+"send_via_messages_app" = "Envoyer via l'app Messages";
+"share_via_email" = "Partager via Email";
+"send_via_mail_app" = "Envoyer via l'app Mail";
+"share_via_social_media" = "Partager via Réseaux Sociaux";
+"share_on_social_platforms" = "Partager sur les plateformes sociales";
+"export_as_pdf" = "Exporter en PDF";
+"create_pdf_document" = "Créer un document PDF";
+"export_as_csv" = "Exporter en CSV";
+"create_csv_file" = "Créer un fichier CSV";
+"save_to_files" = "Sauvegarder dans Fichiers";
+"save_to_files_app" = "Sauvegarder dans l'app Fichiers";
+
+// MARK: - QR Scanner
+"qr_scanner" = "Scanner QR";
+"scan_qr_payment" = "Scanner le Code QR pour le Paiement";
+"position_qr_frame" = "Positionnez le code QR dans le cadre";
+"scanned_code" = "Code Scanné :";
+"process_payment" = "Traiter le Paiement";
+
+// MARK: - Currency
+"currency" = "Devise";
+"select_currency" = "Sélectionner la Devise";
+"us_dollar" = "Dollar US";
+"euro" = "Euro";
+"british_pound" = "Livre Sterling";
+"indian_rupee" = "Roupie Indienne";
+"pakistani_rupee" = "Roupie Pakistanaise";
+"kenyan_shilling" = "Shilling Kenyan";
+"canadian_dollar" = "Dollar Canadien";
+"australian_dollar" = "Dollar Australien";
+
+// MARK: - Filter Options
+"filter_by_currency" = "Filtrer par Devise";
+"filter_by_tip_amount" = "Filtrer par Montant de Pourboire";
+"filter_by_experience" = "Filtrer par Expérience";
+"filter_by_payment_method" = "Filtrer par Méthode de Paiement";
+"filter_by_date" = "Filtrer par Date";
+"low_tip" = "Petit Pourboire (< 10%)";
+"medium_tip" = "Pourboire Moyen (10-20%)";
+"high_tip" = "Gros Pourboire (> 20%)"; 

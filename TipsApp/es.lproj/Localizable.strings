@@ -1,0 +1,124 @@
+// MARK: - General
+"app_name" = "TipsApp";
+"done" = "Hecho";
+"cancel" = "Cancelar";
+"save" = "Guardar";
+"edit" = "Editar";
+"delete" = "Eliminar";
+"share" = "Compartir";
+"ok" = "OK";
+"reset" = "Restablecer";
+
+// MARK: - Calculator
+"tip_calculator" = "Calculadora de Propinas";
+"smart_tip_calculator" = "Calculadora de Propinas Inteligente";
+"calculate_tips_description" = "Calcula propinas basadas en la calidad del servicio y divide facturas fácilmente";
+"bill_amount" = "Monto de la Factura";
+"tip_percentage" = "Porcentaje de Propina";
+"quick_tip_options" = "Opciones de Propina Rápida";
+"custom_amount" = "Monto Personalizado";
+"enter_amount" = "Ingresa el monto";
+"service_experience" = "Experiencia del Servicio";
+"number_of_people" = "Número de Personas";
+"payment_method" = "Método de Pago";
+"calculation_results" = "Resultados del Cálculo";
+"tip_amount" = "Monto de la Propina";
+"total_amount" = "Monto Total";
+"per_person" = "Por Persona";
+"notes_optional" = "Notas (Opcional)";
+"add_notes_placeholder" = "Agrega notas sobre el servicio...";
+"add_tip" = "Agregar Propina";
+"update_tip" = "Actualizar Propina";
+
+// MARK: - Experience
+"excellent" = "Excelente";
+"good" = "Bueno";
+"average" = "Promedio";
+"poor" = "Malo";
+
+// MARK: - Payment Methods
+"cash" = "Efectivo";
+"credit_card" = "Tarjeta de Crédito";
+"debit_card" = "Tarjeta de Débito";
+"qr_code" = "Código QR";
+"digital_wallet" = "Billetera Digital";
+
+// MARK: - History
+"tip_history" = "Historial de Propinas";
+"search_calculations" = "Buscar cálculos...";
+"no_calculations_found" = "No Se Encontraron Cálculos";
+"calculations_history_description" = "Tus cálculos de propinas aparecerán aquí una vez que los guardes.";
+"start_calculating" = "Comenzar a Calcular";
+"filter_all" = "Todo";
+"filter_today" = "Hoy";
+"filter_this_week" = "Esta Semana";
+"filter_this_month" = "Este Mes";
+"total_tips_paid" = "Total de Propinas Pagadas";
+
+// MARK: - Success Alert
+"tip_saved" = "¡Propina Guardada!";
+"tip_saved_message" = "Tu propina ha sido guardada exitosamente. Puedes verla en el historial.";
+"view_history" = "Ver Historial";
+"new_tip" = "Nueva Propina";
+
+// MARK: - Detail View
+"calculation_details" = "Detalles del Cálculo";
+"calculation_breakdown" = "Desglose del Cálculo";
+"service_details" = "Detalles del Servicio";
+"payment_information" = "Información de Pago";
+"custom_tip_amount" = "Monto de Propina Personalizado";
+"service_experience_label" = "Experiencia del Servicio";
+"payment_method_label" = "Método de Pago";
+"split_between" = "Dividido Entre";
+"person" = "persona";
+"persons" = "personas";
+"edit_calculation" = "Editar Cálculo";
+
+// MARK: - Share
+"share_calculation" = "Compartir Cálculo";
+"share_preview" = "Vista Previa del Compartir";
+"share_options" = "Opciones de Compartir";
+"export_options" = "Opciones de Exportar";
+"copy_to_clipboard" = "Copiar al Portapapeles";
+"copy_calculation_details" = "Copiar detalles del cálculo";
+"share_via_message" = "Compartir via Mensaje";
+"send_via_messages_app" = "Enviar via app Mensajes";
+"share_via_email" = "Compartir via Email";
+"send_via_mail_app" = "Enviar via app Mail";
+"share_via_social_media" = "Compartir via Redes Sociales";
+"share_on_social_platforms" = "Compartir en plataformas sociales";
+"export_as_pdf" = "Exportar como PDF";
+"create_pdf_document" = "Crear documento PDF";
+"export_as_csv" = "Exportar como CSV";
+"create_csv_file" = "Crear archivo CSV";
+"save_to_files" = "Guardar en Archivos";
+"save_to_files_app" = "Guardar en app Archivos";
+
+// MARK: - QR Scanner
+"qr_scanner" = "Escáner QR";
+"scan_qr_payment" = "Escanear Código QR para Pago";
+"position_qr_frame" = "Posiciona el código QR dentro del marco";
+"scanned_code" = "Código Escaneado:";
+"process_payment" = "Procesar Pago";
+
+// MARK: - Currency
+"currency" = "Moneda";
+"select_currency" = "Seleccionar Moneda";
+"us_dollar" = "Dólar Estadounidense";
+"euro" = "Euro";
+"british_pound" = "Libra Esterlina";
+"indian_rupee" = "Rupia India";
+"pakistani_rupee" = "Rupia Pakistaní";
+"kenyan_shilling" = "Chelín Keniano";
+"canadian_dollar" = "Dólar Canadiense";
+"australian_dollar" = "Dólar Australiano";
+
+// MARK: - Filter Options
+"filter_by_currency" = "Filtrar por Moneda";
+"filter_by_tip_amount" = "Filtrar por Monto de Propina";
+"filter_by_experience" = "Filtrar por Experiencia";
+"filter_by_payment_method" = "Filtrar por Método de Pago";
+"filter_by_date" = "Filtrar por Fecha";
+"low_tip" = "Propina Baja (< 10%)";
+"medium_tip" = "Propina Media (10-20%)";
+"high_tip" = "Propina Alta (> 20%)"; 

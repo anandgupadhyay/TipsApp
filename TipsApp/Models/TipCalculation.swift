@@ -20,6 +20,7 @@ final class TipCalculation {
     var customTipAmount: Double?
     var timestamp: Date
     var notes: String?
+    var currency: Currency
     
     // Computed properties instead of stored properties
     var tipAmount: Double {
@@ -37,16 +38,54 @@ final class TipCalculation {
         return totalAmount / Double(numberOfPeople)
     }
     
-    init(billAmount: Double, tipPercentage: Double, numberOfPeople: Int, paymentMethod: PaymentMethod, experience: Experience, customTipAmount: Double? = nil, notes: String? = nil) {
+    init(billAmount: Double, tipPercentage: Double, numberOfPeople: Int, paymentMethod: PaymentMethod, experience: Experience, currency: Currency, customTipAmount: Double? = nil, notes: String? = nil) {
         self.id = UUID()
         self.billAmount = billAmount
         self.tipPercentage = tipPercentage
         self.numberOfPeople = numberOfPeople
         self.paymentMethod = paymentMethod
         self.experience = experience
+        self.currency = currency
         self.customTipAmount = customTipAmount
         self.notes = notes
         self.timestamp = Date()
+    }
+}
+
+enum Currency: String, CaseIterable, Codable {
+    case usd = "USD"
+    case eur = "EUR"
+    case gbp = "GBP"
+    case inr = "INR"
+    case pkr = "PKR"
+    case kes = "KES"
+    case cad = "CAD"
+    case aud = "AUD"
+    
+    var symbol: String {
+        switch self {
+        case .usd: return "$"
+        case .eur: return "€"
+        case .gbp: return "£"
+        case .inr: return "₹"
+        case .pkr: return "₨"
+        case .kes: return "KSh"
+        case .cad: return "C$"
+        case .aud: return "A$"
+        }
+    }
+    
+    var name: String {
+        switch self {
+        case .usd: return "US Dollar"
+        case .eur: return "Euro"
+        case .gbp: return "British Pound"
+        case .inr: return "Indian Rupee"
+        case .pkr: return "Pakistani Rupee"
+        case .kes: return "Kenyan Shilling"
+        case .cad: return "Canadian Dollar"
+        case .aud: return "Australian Dollar"
+        }
     }
 }
 

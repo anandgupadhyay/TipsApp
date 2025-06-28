@@ -1,0 +1,124 @@
+// MARK: - General
+"app_name" = "TipsApp";
+"done" = "Done";
+"cancel" = "Cancel";
+"save" = "Save";
+"edit" = "Edit";
+"delete" = "Delete";
+"share" = "Share";
+"ok" = "OK";
+"reset" = "Reset";
+
+// MARK: - Calculator
+"tip_calculator" = "Tip Calculator";
+"smart_tip_calculator" = "Smart Tip Calculator";
+"calculate_tips_description" = "Calculate tips based on service quality and split bills easily";
+"bill_amount" = "Bill Amount";
+"tip_percentage" = "Tip Percentage";
+"quick_tip_options" = "Quick Tip Options";
+"custom_amount" = "Custom Amount";
+"enter_amount" = "Enter amount";
+"service_experience" = "Service Experience";
+"number_of_people" = "Number of People";
+"payment_method" = "Payment Method";
+"calculation_results" = "Calculation Results";
+"tip_amount" = "Tip Amount";
+"total_amount" = "Total Amount";
+"per_person" = "Per Person";
+"notes_optional" = "Notes (Optional)";
+"add_notes_placeholder" = "Add any notes about the service...";
+"add_tip" = "Add Tip";
+"update_tip" = "Update Tip";
+
+// MARK: - Experience
+"excellent" = "Excellent";
+"good" = "Good";
+"average" = "Average";
+"poor" = "Poor";
+
+// MARK: - Payment Methods
+"cash" = "Cash";
+"credit_card" = "Credit Card";
+"debit_card" = "Debit Card";
+"qr_code" = "QR Code";
+"digital_wallet" = "Digital Wallet";
+
+// MARK: - History
+"tip_history" = "Tip History";
+"search_calculations" = "Search calculations...";
+"no_calculations_found" = "No Calculations Found";
+"calculations_history_description" = "Your tip calculations will appear here once you save them.";
+"start_calculating" = "Start Calculating";
+"filter_all" = "All";
+"filter_today" = "Today";
+"filter_this_week" = "This Week";
+"filter_this_month" = "This Month";
+"total_tips_paid" = "Total Tips Paid";
+
+// MARK: - Success Alert
+"tip_saved" = "Tip Saved!";
+"tip_saved_message" = "Your tip has been saved successfully. You can view it in the history.";
+"view_history" = "View History";
+"new_tip" = "New Tip";
+
+// MARK: - Detail View
+"calculation_details" = "Calculation Details";
+"calculation_breakdown" = "Calculation Breakdown";
+"service_details" = "Service Details";
+"payment_information" = "Payment Information";
+"custom_tip_amount" = "Custom Tip Amount";
+"service_experience_label" = "Service Experience";
+"payment_method_label" = "Payment Method";
+"split_between" = "Split Between";
+"person" = "person";
+"persons" = "persons";
+"edit_calculation" = "Edit Calculation";
+
+// MARK: - Share
+"share_calculation" = "Share Calculation";
+"share_preview" = "Share Preview";
+"share_options" = "Share Options";
+"export_options" = "Export Options";
+"copy_to_clipboard" = "Copy to Clipboard";
+"copy_calculation_details" = "Copy calculation details";
+"share_via_message" = "Share via Message";
+"send_via_messages_app" = "Send via Messages app";
+"share_via_email" = "Share via Email";
+"send_via_mail_app" = "Send via Mail app";
+"share_via_social_media" = "Share via Social Media";
+"share_on_social_platforms" = "Share on social platforms";
+"export_as_pdf" = "Export as PDF";
+"create_pdf_document" = "Create a PDF document";
+"export_as_csv" = "Export as CSV";
+"create_csv_file" = "Create a CSV file";
+"save_to_files" = "Save to Files";
+"save_to_files_app" = "Save to Files app";
+
+// MARK: - QR Scanner
+"qr_scanner" = "QR Scanner";
+"scan_qr_payment" = "Scan QR Code for Payment";
+"position_qr_frame" = "Position the QR code within the frame";
+"scanned_code" = "Scanned Code:";
+"process_payment" = "Process Payment";
+
+// MARK: - Currency
+"currency" = "Currency";
+"select_currency" = "Select Currency";
+"us_dollar" = "US Dollar";
+"euro" = "Euro";
+"british_pound" = "British Pound";
+"indian_rupee" = "Indian Rupee";
+"pakistani_rupee" = "Pakistani Rupee";
+"kenyan_shilling" = "Kenyan Shilling";
+"canadian_dollar" = "Canadian Dollar";
+"australian_dollar" = "Australian Dollar";
+
+// MARK: - Filter Options
+"filter_by_currency" = "Filter by Currency";
+"filter_by_tip_amount" = "Filter by Tip Amount";
+"filter_by_experience" = "Filter by Experience";
+"filter_by_payment_method" = "Filter by Payment Method";
+"filter_by_date" = "Filter by Date";
+"low_tip" = "Low Tip (< 10%)";
+"medium_tip" = "Medium Tip (10-20%)";
+"high_tip" = "High Tip (> 20%)"; 

@@ -15,11 +15,13 @@ struct TipCalculatorView: View {
     @State private var numberOfPeople: Int = 1
     @State private var selectedPaymentMethod: PaymentMethod = .creditCard
     @State private var selectedExperience: Experience = .good
+    @State private var selectedCurrency: Currency = .usd
     @State private var customTipAmount: String = ""
     @State private var notes: String = ""
     @State private var showingQRScanner = false
     @State private var showingHistory = false
     @State private var showingSuccessAlert = false
+    @State private var showingCurrencyPicker = false
     
     private let tipPercentages = [10.0, 12.0, 15.0, 18.0, 20.0, 25.0]
     private let quickTipAmounts = [5.0, 10.0, 20.0]
@@ -47,6 +49,9 @@ struct TipCalculatorView: View {
                 VStack(spacing: 24) {
                     // Header
                     headerSection
+                    
+                    // Currency Selection
+                    currencySection
                     
                     // Bill Amount Input
                     billAmountSection
@@ -77,7 +82,7 @@ struct TipCalculatorView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Tip Calculator")
+            .navigationTitle("tip_calculator".localized)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -91,6 +96,9 @@ struct TipCalculatorView: View {
             }
             .sheet(isPresented: $showingQRScanner) {
                 QRScannerView()
+            }
+            .sheet(isPresented: $showingCurrencyPicker) {
+                CurrencyPickerView(selectedCurrency: $selectedCurrency)
             }
             .overlay(
                 // Custom Success Alert
@@ -120,33 +128,52 @@ struct TipCalculatorView: View {
                             
                             // Success Message
                             VStack(spacing: 8) {
-                                Text("Calculation Saved!")
+                                Text("tip_saved".localized)
                                     .font(.title2)
                                     .fontWeight(.bold)
                                     .foregroundColor(.primary)
                                 
-                                Text("Your tip calculation has been saved successfully. You can view it in the history.")
+                                Text("tip_saved_message".localized)
                                     .font(.body)
                                     .foregroundColor(.secondary)
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal)
                             }
                             
-                            // OK Button
-                            Button(action: {
-                                withAnimation(.easeInOut(duration: 0.3)) {
-                                    showingSuccessAlert = false
+                            // Action Buttons
+                            HStack(spacing: 12) {
+                                Button(action: {
+                                    withAnimation(.easeInOut(duration: 0.3)) {
+                                        showingSuccessAlert = false
+                                        showingHistory = true
+                                    }
+                                }) {
+                                    Text("view_history".localized)
+                                        .font(.headline)
+                                        .foregroundColor(.blue)
+                                        .frame(maxWidth: .infinity)
+                                        .padding()
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(Color.blue, lineWidth: 2)
+                                        )
                                 }
-                            }) {
-                                Text("OK")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .fill(Color.blue)
-                                    )
+                                
+                                Button(action: {
+                                    withAnimation(.easeInOut(duration: 0.3)) {
+                                        showingSuccessAlert = false
+                                    }
+                                }) {
+                                    Text("new_tip".localized)
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .padding()
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color.blue)
+                                        )
+                                }
                             }
                             .padding(.horizontal)
                         }
@@ -172,24 +199,54 @@ struct TipCalculatorView: View {
                 .font(.system(size: 40))
                 .foregroundColor(.blue)
             
-            Text("Smart Tip Calculator")
+            Text("smart_tip_calculator".localized)
                 .font(.title2)
                 .fontWeight(.semibold)
             
-            Text("Calculate tips based on service quality and split bills easily")
+            Text("calculate_tips_description".localized)
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
         }
     }
     
+    private var currencySection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("currency".localized)
+                .font(.headline)
+            
+            Button(action: { showingCurrencyPicker = true }) {
+                HStack {
+                    Text(selectedCurrency.symbol)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Text(selectedCurrency.name)
+                        .font(.body)
+                        .foregroundColor(.secondary)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.secondary)
+                }
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.gray.opacity(0.1))
+                )
+            }
+            .foregroundColor(.primary)
+        }
+    }
+    
     private var billAmountSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Bill Amount")
+            Text("bill_amount".localized)
                 .font(.headline)
             
             HStack {
-                Text("$")
+                Text(selectedCurrency.symbol)
                     .font(.title2)
                     .foregroundColor(.secondary)
                 
@@ -200,7 +257,7 @@ struct TipCalculatorView: View {
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
-                            Button("Done") {
+                            Button("done".localized) {
                                 hideKeyboard()
                             }
                         }
@@ -211,7 +268,7 @@ struct TipCalculatorView: View {
     
     private var tipPercentageSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Tip Percentage")
+            Text("tip_percentage".localized)
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 12) {
@@ -237,7 +294,7 @@ struct TipCalculatorView: View {
     
     private var quickTipSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Quick Tip Options")
+            Text("quick_tip_options".localized)
                 .font(.headline)
             
             HStack(spacing: 12) {
@@ -246,7 +303,7 @@ struct TipCalculatorView: View {
                         customTipAmount = String(amount)
                     }) {
                         VStack {
-                            Text("$\(Int(amount))")
+                            Text("\(selectedCurrency.symbol)\(Int(amount))")
                                 .font(.headline)
                                 .foregroundColor(.white)
                             Text("Quick")
@@ -264,16 +321,16 @@ struct TipCalculatorView: View {
             }
             
             HStack {
-                Text("Custom Amount:")
+                Text("custom_amount".localized + ":")
                     .font(.subheadline)
                 
-                TextField("Enter amount", text: $customTipAmount)
+                TextField("enter_amount".localized, text: $customTipAmount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
-                            Button("Done") {
+                            Button("done".localized) {
                                 hideKeyboard()
                             }
                         }
@@ -284,7 +341,7 @@ struct TipCalculatorView: View {
     
     private var experienceSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Service Experience")
+            Text("service_experience".localized)
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 12) {
@@ -299,7 +356,7 @@ struct TipCalculatorView: View {
                                 .foregroundColor(experience.color)
                             
                             VStack(alignment: .leading) {
-                                Text(experience.rawValue)
+                                Text(experience.rawValue.localized)
                                     .font(.subheadline)
                                     .fontWeight(.medium)
                                 Text("\(Int(experience.tipPercentage))%")
@@ -327,7 +384,7 @@ struct TipCalculatorView: View {
     
     private var numberOfPeopleSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Number of People")
+            Text("number_of_people".localized)
                 .font(.headline)
             
             HStack {
@@ -368,7 +425,7 @@ struct TipCalculatorView: View {
     
     private var paymentMethodSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Payment Method")
+            Text("payment_method".localized)
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 12) {
@@ -384,7 +441,7 @@ struct TipCalculatorView: View {
                                 .font(.title2)
                                 .foregroundColor(selectedPaymentMethod == method ? .blue : .primary)
                             
-                            Text(method.rawValue)
+                            Text(method.rawValue.localized)
                                 .font(.caption)
                                 .multilineTextAlignment(.center)
                         }
@@ -407,17 +464,17 @@ struct TipCalculatorView: View {
     
     private var resultsSection: some View {
         VStack(spacing: 16) {
-            Text("Calculation Results")
+            Text("calculation_results".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
-                ResultRow(title: "Bill Amount", value: "$\(String(format: "%.2f", Double(billAmount) ?? 0))")
-                ResultRow(title: "Tip Amount", value: "$\(String(format: "%.2f", calculatedTip))")
-                ResultRow(title: "Total Amount", value: "$\(String(format: "%.2f", calculatedTotal))")
+                ResultRow(title: "bill_amount".localized, value: "\(selectedCurrency.symbol)\(String(format: "%.2f", Double(billAmount) ?? 0))")
+                ResultRow(title: "tip_amount".localized, value: "\(selectedCurrency.symbol)\(String(format: "%.2f", calculatedTip))")
+                ResultRow(title: "total_amount".localized, value: "\(selectedCurrency.symbol)\(String(format: "%.2f", calculatedTotal))")
                 
                 if numberOfPeople > 1 {
                     Divider()
-                    ResultRow(title: "Per Person", value: "$\(String(format: "%.2f", amountPerPerson))")
+                    ResultRow(title: "per_person".localized, value: "\(selectedCurrency.symbol)\(String(format: "%.2f", amountPerPerson))")
                 }
             }
             .padding()
@@ -430,16 +487,16 @@ struct TipCalculatorView: View {
     
     private var notesSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Notes (Optional)")
+            Text("notes_optional".localized)
                 .font(.headline)
             
-            TextField("Add any notes about the service...", text: $notes, axis: .vertical)
+            TextField("add_notes_placeholder".localized, text: $notes, axis: .vertical)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .lineLimit(3...6)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
-                        Button("Done") {
+                        Button("done".localized) {
                             hideKeyboard()
                         }
                     }
@@ -452,7 +509,7 @@ struct TipCalculatorView: View {
             Button(action: saveCalculation) {
                 HStack {
                     Image(systemName: "checkmark.circle.fill")
-                    Text("Add Tip")
+                    Text("add_tip".localized)
                 }
                 .font(.headline)
                 .foregroundColor(.white)
@@ -468,7 +525,7 @@ struct TipCalculatorView: View {
             Button(action: resetForm) {
                 HStack {
                     Image(systemName: "arrow.clockwise")
-                    Text("Reset")
+                    Text("reset".localized)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
@@ -491,6 +548,7 @@ struct TipCalculatorView: View {
             numberOfPeople: numberOfPeople,
             paymentMethod: selectedPaymentMethod,
             experience: selectedExperience,
+            currency: selectedCurrency,
             customTipAmount: Double(customTipAmount),
             notes: notes.isEmpty ? nil : notes
         )
@@ -510,6 +568,7 @@ struct TipCalculatorView: View {
         numberOfPeople = 1
         selectedPaymentMethod = .creditCard
         selectedExperience = .good
+        selectedCurrency = .usd
         customTipAmount = ""
         notes = ""
     }
