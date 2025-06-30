@@ -1,0 +1,124 @@
+// MARK: - General
+"app_name" = "TipsApp";
+"done" = "हो गया";
+"cancel" = "रद्द करें";
+"save" = "सहेजें";
+"edit" = "संपादित करें";
+"delete" = "हटाएं";
+"share" = "साझा करें";
+"ok" = "ठीक है";
+"reset" = "रीसेट करें";
+
+// MARK: - Calculator
+"tip_calculator" = "टिप कैलकुलेटर";
+"smart_tip_calculator" = "स्मार्ट टिप कैलकुलेटर";
+"calculate_tips_description" = "सेवा की गुणवत्ता के आधार पर टिप की गणना करें और बिल को आसानी से बांटें";
+"bill_amount" = "बिल की राशि";
+"tip_percentage" = "टिप का प्रतिशत";
+"quick_tip_options" = "त्वरित टिप विकल्प";
+"custom_amount" = "कस्टम राशि";
+"enter_amount" = "राशि दर्ज करें";
+"service_experience" = "सेवा का अनुभव";
+"number_of_people" = "लोगों की संख्या";
+"payment_method" = "भुगतान का तरीका";
+"calculation_results" = "गणना के परिणाम";
+"tip_amount" = "टिप की राशि";
+"total_amount" = "कुल राशि";
+"per_person" = "प्रति व्यक्ति";
+"notes_optional" = "नोट्स (वैकल्पिक)";
+"add_notes_placeholder" = "सेवा के बारे में नोट्स जोड़ें...";
+"add_tip" = "टिप जोड़ें";
+"update_tip" = "टिप अपडेट करें";
+
+// MARK: - Experience
+"excellent" = "उत्कृष्ट";
+"good" = "अच्छा";
+"average" = "औसत";
+"poor" = "खराब";
+
+// MARK: - Payment Methods
+"cash" = "नकद";
+"credit_card" = "क्रेडिट कार्ड";
+"debit_card" = "डेबिट कार्ड";
+"qr_code" = "QR कोड";
+"digital_wallet" = "डिजिटल वॉलेट";
+
+// MARK: - History
+"tip_history" = "टिप का इतिहास";
+"search_calculations" = "गणनाएं खोजें...";
+"no_calculations_found" = "कोई गणना नहीं मिली";
+"calculations_history_description" = "आपकी टिप गणनाएं यहां दिखाई देंगी जब आप उन्हें सहेजेंगे।";
+"start_calculating" = "गणना शुरू करें";
+"filter_all" = "सभी";
+"filter_today" = "आज";
+"filter_this_week" = "इस सप्ताह";
+"filter_this_month" = "इस महीने";
+"total_tips_paid" = "कुल टिप भुगतान";
+
+// MARK: - Success Alert
+"tip_saved" = "टिप सहेजा गया!";
+"tip_saved_message" = "आपकी टिप सफलतापूर्वक सहेजी गई है। आप इसे इतिहास में देख सकते हैं।";
+"view_history" = "इतिहास देखें";
+"new_tip" = "नई टिप";
+
+// MARK: - Detail View
+"calculation_details" = "गणना का विवरण";
+"calculation_breakdown" = "गणना का विभाजन";
+"service_details" = "सेवा का विवरण";
+"payment_information" = "भुगतान की जानकारी";
+"custom_tip_amount" = "कस्टम टिप राशि";
+"service_experience_label" = "सेवा का अनुभव";
+"payment_method_label" = "भुगतान का तरीका";
+"split_between" = "बीच में बांटा गया";
+"person" = "व्यक्ति";
+"persons" = "लोग";
+"edit_calculation" = "गणना संपादित करें";
+
+// MARK: - Share
+"share_calculation" = "गणना साझा करें";
+"share_preview" = "साझा करने का पूर्वावलोकन";
+"share_options" = "साझा करने के विकल्प";
+"export_options" = "निर्यात के विकल्प";
+"copy_to_clipboard" = "क्लिपबोर्ड पर कॉपी करें";
+"copy_calculation_details" = "गणना का विवरण कॉपी करें";
+"share_via_message" = "संदेश के माध्यम से साझा करें";
+"send_via_messages_app" = "संदेश ऐप के माध्यम से भेजें";
+"share_via_email" = "ईमेल के माध्यम से साझा करें";
+"send_via_mail_app" = "मेल ऐप के माध्यम से भेजें";
+"share_via_social_media" = "सोशल मीडिया के माध्यम से साझा करें";
+"share_on_social_platforms" = "सोशल प्लेटफॉर्म पर साझा करें";
+"export_as_pdf" = "PDF के रूप में निर्यात करें";
+"create_pdf_document" = "PDF दस्तावेज़ बनाएं";
+"export_as_csv" = "CSV के रूप में निर्यात करें";
+"create_csv_file" = "CSV फ़ाइल बनाएं";
+"save_to_files" = "फ़ाइलों में सहेजें";
+"save_to_files_app" = "फ़ाइल ऐप में सहेजें";
+
+// MARK: - QR Scanner
+"qr_scanner" = "QR स्कैनर";
+"scan_qr_payment" = "भुगतान के लिए QR कोड स्कैन करें";
+"position_qr_frame" = "QR कोड को फ्रेम के अंदर रखें";
+"scanned_code" = "स्कैन किया गया कोड:";
+"process_payment" = "भुगतान प्रक्रिया करें";
+
+// MARK: - Currency
+"currency" = "मुद्रा";
+"select_currency" = "मुद्रा चुनें";
+"us_dollar" = "अमेरिकी डॉलर";
+"euro" = "यूरो";
+"british_pound" = "ब्रिटिश पाउंड";
+"indian_rupee" = "भारतीय रुपया";
+"pakistani_rupee" = "पाकिस्तानी रुपया";
+"kenyan_shilling" = "केन्याई शिलिंग";
+"canadian_dollar" = "कनाडाई डॉलर";
+"australian_dollar" = "ऑस्ट्रेलियाई डॉलर";
+
+// MARK: - Filter Options
+"filter_by_currency" = "मुद्रा के अनुसार फ़िल्टर करें";
+"filter_by_tip_amount" = "टिप राशि के अनुसार फ़िल्टर करें";
+"filter_by_experience" = "अनुभव के अनुसार फ़िल्टर करें";
+"filter_by_payment_method" = "भुगतान के तरीके के अनुसार फ़िल्टर करें";
+"filter_by_date" = "तिथि के अनुसार फ़िल्टर करें";
+"low_tip" = "कम टिप (< 10%)";
+"medium_tip" = "मध्यम टिप (10-20%)";
+"high_tip" = "उच्च टिप (> 20%)"; 

@@ -79,22 +79,22 @@ struct TipCalculationDetailView: View {
     
     private var calculationBreakdownSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Calculation Breakdown")
+            Text("calculation_breakdown".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
-                DetailRow(title: "Bill Amount", value: "$\(String(format: "%.2f", calculation.billAmount))", icon: "dollarsign.circle")
+                DetailRow(title: "bill_amount".localized, value: "\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.billAmount))", icon: "dollarsign.circle")
                 
-                DetailRow(title: "Tip Amount", value: "$\(String(format: "%.2f", calculation.tipAmount))", icon: "plus.circle")
+                DetailRow(title: "tip_amount".localized, value: "\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.tipAmount))", icon: "plus.circle")
                     .foregroundColor(.green)
                 
                 Divider()
                 
-                DetailRow(title: "Total Amount", value: "$\(String(format: "%.2f", calculation.totalAmount))", icon: "equal.circle")
+                DetailRow(title: "total_amount".localized, value: "\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.totalAmount))", icon: "equal.circle")
                     .fontWeight(.semibold)
                 
                 if calculation.numberOfPeople > 1 {
-                    DetailRow(title: "Per Person", value: "$\(String(format: "%.2f", calculation.amountPerPerson))", icon: "person.2.circle")
+                    DetailRow(title: "per_person".localized, value: "\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.amountPerPerson))", icon: "person.2.circle")
                         .foregroundColor(.orange)
                 }
             }
@@ -108,7 +108,7 @@ struct TipCalculationDetailView: View {
     
     private var serviceDetailsSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Service Details")
+            Text("service_details".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
@@ -118,10 +118,10 @@ struct TipCalculationDetailView: View {
                         .font(.title2)
                     
                     VStack(alignment: .leading) {
-                        Text("Service Experience")
+                        Text("service_experience_label".localized)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                        Text(calculation.experience.rawValue)
+                        Text(calculation.experience.rawValue.localized)
                             .font(.headline)
                     }
                     
@@ -140,10 +140,10 @@ struct TipCalculationDetailView: View {
                             .font(.title2)
                         
                         VStack(alignment: .leading) {
-                            Text("Custom Tip Amount")
+                            Text("custom_tip_amount".localized)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
-                            Text("$\(String(format: "%.2f", customTip))")
+                            Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", customTip))")
                                 .font(.headline)
                         }
                         
@@ -161,7 +161,7 @@ struct TipCalculationDetailView: View {
     
     private var paymentInfoSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Payment Information")
+            Text("payment_information".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
@@ -171,10 +171,10 @@ struct TipCalculationDetailView: View {
                         .font(.title2)
                     
                     VStack(alignment: .leading) {
-                        Text("Payment Method")
+                        Text("payment_method_label".localized)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                        Text(calculation.paymentMethod.rawValue)
+                        Text(calculation.paymentMethod.rawValue.localized)
                             .font(.headline)
                     }
                     
@@ -187,10 +187,10 @@ struct TipCalculationDetailView: View {
                         .font(.title2)
                     
                     VStack(alignment: .leading) {
-                        Text("Split Between")
+                        Text("split_between".localized)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
-                        Text("\(calculation.numberOfPeople) person\(calculation.numberOfPeople > 1 ? "s" : "")")
+                        Text("\(calculation.numberOfPeople) \(calculation.numberOfPeople > 1 ? "persons".localized : "person".localized)")
                             .font(.headline)
                     }
                     
@@ -207,7 +207,7 @@ struct TipCalculationDetailView: View {
     
     private func notesSection(notes: String) -> some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Notes")
+            Text("notes_optional".localized)
                 .font(.headline)
             
             Text(notes)
@@ -226,7 +226,7 @@ struct TipCalculationDetailView: View {
             Button(action: { showingEditSheet = true }) {
                 HStack {
                     Image(systemName: "pencil")
-                    Text("Edit Calculation")
+                    Text("edit_calculation".localized)
                 }
                 .font(.headline)
                 .foregroundColor(.white)
@@ -241,7 +241,7 @@ struct TipCalculationDetailView: View {
             Button(action: { showingShareSheet = true }) {
                 HStack {
                     Image(systemName: "square.and.arrow.up")
-                    Text("Share")
+                    Text("share".localized)
                 }
                 .font(.headline)
                 .foregroundColor(.blue)
@@ -286,6 +286,7 @@ struct DetailRow: View {
             numberOfPeople: 2,
             paymentMethod: .creditCard,
             experience: .good,
+            currency: .usd,
             notes: "Great service!"
         ))
     }

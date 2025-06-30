@@ -17,15 +17,39 @@ struct TipsAppApp: App {
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            
+            // Migrate existing data to set default currency
+            migrateExistingData(container: container)
+            
+            return container
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    private static func migrateExistingData(container: ModelContainer) {
+        let context = container.mainContext
+        
+        do {
+            let descriptor = FetchDescriptor<TipCalculation>()
+            let calculations = try context.fetch(descriptor)
+            
+            for calculation in calculations {
+                if calculation.currency == nil {
+                    calculation.currency = .usd
+                }
+            }
+            
+            try context.save()
+        } catch {
+            print("Migration failed: \(error)")
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -18,6 +18,7 @@ struct EditTipCalculationView: View {
     @State private var numberOfPeople: Int
     @State private var selectedPaymentMethod: PaymentMethod
     @State private var selectedExperience: Experience
+    @State private var selectedCurrency: Currency
     @State private var customTipAmount: String
     @State private var notes: String
     
@@ -30,6 +31,7 @@ struct EditTipCalculationView: View {
         _numberOfPeople = State(initialValue: calculation.numberOfPeople)
         _selectedPaymentMethod = State(initialValue: calculation.paymentMethod)
         _selectedExperience = State(initialValue: calculation.experience)
+        _selectedCurrency = State(initialValue: calculation.effectiveCurrency)
         _customTipAmount = State(initialValue: calculation.customTipAmount.map { String(format: "%.2f", $0) } ?? "")
         _notes = State(initialValue: calculation.notes ?? "")
     }
@@ -342,6 +344,7 @@ struct EditTipCalculationView: View {
         calculation.numberOfPeople = numberOfPeople
         calculation.paymentMethod = selectedPaymentMethod
         calculation.experience = selectedExperience
+        calculation.currency = selectedCurrency
         calculation.customTipAmount = Double(customTipAmount)
         calculation.notes = notes.isEmpty ? nil : notes
         
@@ -363,6 +366,7 @@ struct EditTipCalculationView: View {
         numberOfPeople: 2,
         paymentMethod: .creditCard,
         experience: .good,
+        currency: .usd,
         notes: "Great service!"
     ))
     .modelContainer(for: TipCalculation.self, inMemory: true)

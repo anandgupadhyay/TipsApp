@@ -20,7 +20,7 @@ final class TipCalculation {
     var customTipAmount: Double?
     var timestamp: Date
     var notes: String?
-    var currency: Currency
+    var currency: Currency?
     
     // Computed properties instead of stored properties
     var tipAmount: Double {
@@ -38,14 +38,19 @@ final class TipCalculation {
         return totalAmount / Double(numberOfPeople)
     }
     
-    init(billAmount: Double, tipPercentage: Double, numberOfPeople: Int, paymentMethod: PaymentMethod, experience: Experience, currency: Currency, customTipAmount: Double? = nil, notes: String? = nil) {
+    // Computed property to get currency with default
+    var effectiveCurrency: Currency {
+        return currency ?? .usd
+    }
+    
+    init(billAmount: Double, tipPercentage: Double, numberOfPeople: Int, paymentMethod: PaymentMethod, experience: Experience, currency: Currency? = nil, customTipAmount: Double? = nil, notes: String? = nil) {
         self.id = UUID()
         self.billAmount = billAmount
         self.tipPercentage = tipPercentage
         self.numberOfPeople = numberOfPeople
         self.paymentMethod = paymentMethod
         self.experience = experience
-        self.currency = currency
+        self.currency = currency ?? .usd
         self.customTipAmount = customTipAmount
         self.notes = notes
         self.timestamp = Date()

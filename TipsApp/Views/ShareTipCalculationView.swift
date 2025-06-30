@@ -40,23 +40,23 @@ struct ShareTipCalculationView: View {
     
     private var sharePreviewSection: some View {
         VStack(spacing: 16) {
-            Text("Share Preview")
+            Text("share_preview".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
                 HStack {
-                    Text("Bill Amount")
+                    Text("bill_amount".localized)
                         .foregroundColor(.secondary)
                     Spacer()
-                    Text("$\(String(format: "%.2f", calculation.billAmount))")
+                    Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.billAmount))")
                         .fontWeight(.semibold)
                 }
                 
                 HStack {
-                    Text("Tip Amount")
+                    Text("tip_amount".localized)
                         .foregroundColor(.secondary)
                     Spacer()
-                    Text("$\(String(format: "%.2f", calculation.tipAmount))")
+                    Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.tipAmount))")
                         .fontWeight(.semibold)
                         .foregroundColor(.green)
                 }
@@ -64,20 +64,20 @@ struct ShareTipCalculationView: View {
                 Divider()
                 
                 HStack {
-                    Text("Total Amount")
+                    Text("total_amount".localized)
                         .fontWeight(.semibold)
                     Spacer()
-                    Text("$\(String(format: "%.2f", calculation.totalAmount))")
+                    Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.totalAmount))")
                         .fontWeight(.bold)
                         .foregroundColor(.blue)
                 }
                 
                 if calculation.numberOfPeople > 1 {
                     HStack {
-                        Text("Per Person")
+                        Text("per_person".localized)
                         .foregroundColor(.secondary)
                         Spacer()
-                        Text("$\(String(format: "%.2f", calculation.amountPerPerson))")
+                        Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.amountPerPerson))")
                             .fontWeight(.semibold)
                             .foregroundColor(.orange)
                     }
@@ -93,13 +93,13 @@ struct ShareTipCalculationView: View {
     
     private var shareOptionsSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Share Options")
+            Text("share_options".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
                 ShareOptionRow(
-                    title: "Copy to Clipboard",
-                    subtitle: "Copy calculation details",
+                    title: "copy_to_clipboard".localized,
+                    subtitle: "copy_calculation_details".localized,
                     icon: "doc.on.clipboard",
                     color: .blue
                 ) {
@@ -107,8 +107,8 @@ struct ShareTipCalculationView: View {
                 }
                 
                 ShareOptionRow(
-                    title: "Share via Message",
-                    subtitle: "Send via Messages app",
+                    title: "share_via_message".localized,
+                    subtitle: "send_via_messages_app".localized,
                     icon: "message",
                     color: .green
                 ) {
@@ -116,8 +116,8 @@ struct ShareTipCalculationView: View {
                 }
                 
                 ShareOptionRow(
-                    title: "Share via Email",
-                    subtitle: "Send via Mail app",
+                    title: "share_via_email".localized,
+                    subtitle: "send_via_mail_app".localized,
                     icon: "envelope",
                     color: .orange
                 ) {
@@ -125,8 +125,8 @@ struct ShareTipCalculationView: View {
                 }
                 
                 ShareOptionRow(
-                    title: "Share via Social Media",
-                    subtitle: "Share on social platforms",
+                    title: "share_via_social_media".localized,
+                    subtitle: "share_on_social_platforms".localized,
                     icon: "square.and.arrow.up",
                     color: .purple
                 ) {
@@ -138,13 +138,13 @@ struct ShareTipCalculationView: View {
     
     private var exportOptionsSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Export Options")
+            Text("export_options".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
                 ShareOptionRow(
-                    title: "Export as PDF",
-                    subtitle: "Create a PDF document",
+                    title: "export_as_pdf".localized,
+                    subtitle: "create_pdf_document".localized,
                     icon: "doc.text",
                     color: .red
                 ) {
@@ -152,8 +152,8 @@ struct ShareTipCalculationView: View {
                 }
                 
                 ShareOptionRow(
-                    title: "Export as CSV",
-                    subtitle: "Create a CSV file",
+                    title: "export_as_csv".localized,
+                    subtitle: "create_csv_file".localized,
                     icon: "tablecells",
                     color: .green
                 ) {
@@ -161,8 +161,8 @@ struct ShareTipCalculationView: View {
                 }
                 
                 ShareOptionRow(
-                    title: "Save to Files",
-                    subtitle: "Save to Files app",
+                    title: "save_to_files".localized,
+                    subtitle: "save_to_files_app".localized,
                     icon: "folder",
                     color: .blue
                 ) {
@@ -231,20 +231,20 @@ struct ShareTipCalculationView: View {
     }
     
     private func generateShareText() -> String {
-        var text = "💳 Tip Calculation\n\n"
-        text += "Bill Amount: $\(String(format: "%.2f", calculation.billAmount))\n"
-        text += "Tip Amount: $\(String(format: "%.2f", calculation.tipAmount)) (\(Int(calculation.tipPercentage))%)\n"
-        text += "Total Amount: $\(String(format: "%.2f", calculation.totalAmount))\n"
+        var text = "💳 \("app_name".localized)\n\n"
+        text += "\("bill_amount".localized): \(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.billAmount))\n"
+        text += "\("tip_amount".localized): \(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.tipAmount)) (\(Int(calculation.tipPercentage))%)\n"
+        text += "\("total_amount".localized): \(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.totalAmount))\n"
         
         if calculation.numberOfPeople > 1 {
-            text += "Per Person: $\(String(format: "%.2f", calculation.amountPerPerson))\n"
+            text += "\("per_person".localized): \(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.amountPerPerson))\n"
         }
         
-        text += "Payment Method: \(calculation.paymentMethod.rawValue)\n"
-        text += "Service Experience: \(calculation.experience.rawValue)\n"
+        text += "\("payment_method_label".localized): \(calculation.paymentMethod.rawValue.localized)\n"
+        text += "\("service_experience_label".localized): \(calculation.experience.rawValue.localized)\n"
         
         if let notes = calculation.notes, !notes.isEmpty {
-            text += "Notes: \(notes)\n"
+            text += "\("notes_optional".localized): \(notes)\n"
         }
         
         let dateFormatter = DateFormatter()
@@ -306,6 +306,7 @@ struct ShareOptionRow: View {
         numberOfPeople: 2,
         paymentMethod: .creditCard,
         experience: .good,
+        currency: .usd,
         notes: "Great service!"
     ))
 } 

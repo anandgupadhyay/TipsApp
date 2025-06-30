@@ -42,7 +42,7 @@ struct TipHistoryView: View {
             filtered = filtered.filter { calculation in
                 return calculation.notes?.localizedCaseInsensitiveContains(searchText) ?? false ||
                        String(format: "%.2f", calculation.billAmount).contains(searchText) ||
-                       calculation.currency.rawValue.localizedCaseInsensitiveContains(searchText)
+                       calculation.effectiveCurrency.rawValue.localizedCaseInsensitiveContains(searchText)
             }
         }
         
@@ -60,7 +60,7 @@ struct TipHistoryView: View {
         
         // Currency filter
         if let currencyFilter = selectedCurrencyFilter {
-            filtered = filtered.filter { $0.currency == currencyFilter }
+            filtered = filtered.filter { $0.effectiveCurrency == currencyFilter }
         }
         
         // Tip amount filter
@@ -90,6 +90,16 @@ struct TipHistoryView: View {
     
     var totalTipsPaid: Double {
         return filteredCalculations.reduce(0) { $0 + $1.tipAmount }
+    }
+    
+    var totalTipsCurrency: Currency {
+        // If all calculations have the same currency, use that
+        let currencies = Set(filteredCalculations.map { $0.effectiveCurrency })
+        if currencies.count == 1, let currency = currencies.first {
+            return currency
+        }
+        // Otherwise default to USD for mixed currencies
+        return .usd
     }
     
     var body: some View {
@@ -177,7 +187,7 @@ struct TipHistoryView: View {
                 
                 Spacer()
                 
-                Text("$\(String(format: "%.2f", totalTipsPaid))")
+                Text("\(totalTipsCurrency.symbol)\(String(format: "%.2f", totalTipsPaid))")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.green)
@@ -237,7 +247,7 @@ struct TipCalculationRowView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("\(calculation.currency.symbol)\(String(format: "%.2f", calculation.billAmount))")
+                    Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.billAmount))")
                         .font(.headline)
                         .fontWeight(.semibold)
                     
@@ -249,7 +259,7 @@ struct TipCalculationRowView: View {
                 Spacer()
                 
                 VStack(alignment: .trailing) {
-                    Text("\(calculation.currency.symbol)\(String(format: "%.2f", calculation.totalAmount))")
+                    Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.totalAmount))")
                         .font(.headline)
                         .foregroundColor(.blue)
                     

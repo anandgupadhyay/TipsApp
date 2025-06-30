@@ -82,7 +82,7 @@ struct TipCalculatorView: View {
                 }
                 .padding()
             }
-            .navigationTitle("tip_calculator".localized)
+            .navigationTitle("app_name".localized)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -190,14 +190,22 @@ struct TipCalculatorView: View {
                     }
                 }
             )
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("done".localized) {
+                        hideKeyboard()
+                    }
+                }
+            }
         }
     }
     
     private var headerSection: some View {
         VStack(spacing: 8) {
-            Image(systemName: "calculator")
-                .font(.system(size: 40))
-                .foregroundColor(.blue)
+//            Image("iTunesArtwork")
+//                .frame(width: 40, height: 40)
+//                .cornerRadius(5.0)
             
             Text("smart_tip_calculator".localized)
                 .font(.title2)
@@ -254,14 +262,6 @@ struct TipCalculatorView: View {
                     .font(.title)
                     .keyboardType(.decimalPad)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Spacer()
-                            Button("done".localized) {
-                                hideKeyboard()
-                            }
-                        }
-                    }
             }
         }
     }
@@ -327,14 +327,6 @@ struct TipCalculatorView: View {
                 TextField("enter_amount".localized, text: $customTipAmount)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
-                    .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Spacer()
-                            Button("done".localized) {
-                                hideKeyboard()
-                            }
-                        }
-                    }
             }
         }
     }
@@ -493,14 +485,6 @@ struct TipCalculatorView: View {
             TextField("add_notes_placeholder".localized, text: $notes, axis: .vertical)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .lineLimit(3...6)
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        Button("done".localized) {
-                            hideKeyboard()
-                        }
-                    }
-                }
         }
     }
     
@@ -517,10 +501,10 @@ struct TipCalculatorView: View {
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.blue)
+                        .fill(isCalculationReady ? Color.blue : Color.gray)
                 )
             }
-            .disabled(billAmount.isEmpty || Double(billAmount) == 0)
+            .disabled(!isCalculationReady)
             
             Button(action: resetForm) {
                 HStack {
@@ -537,6 +521,16 @@ struct TipCalculatorView: View {
                 )
             }
         }
+    }
+    
+    private var isCalculationReady: Bool {
+        guard let bill = Double(billAmount), bill > 0 else { return false }
+        
+        // Check if we have a valid tip calculation
+        let tipAmount = calculatedTip
+        let totalAmount = calculatedTotal
+        
+        return tipAmount > 0 && totalAmount > bill
     }
     
     private func saveCalculation() {
