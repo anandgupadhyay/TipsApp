@@ -39,7 +39,7 @@ struct TipCalculationDetailView: View {
             }
             .padding()
         }
-        .navigationTitle("Calculation Details")
+        .navigationTitle("tip_detail".localized)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -58,15 +58,15 @@ struct TipCalculationDetailView: View {
     
     private var headerSection: some View {
         VStack(spacing: 16) {
-            Text("Total Amount")
+            Text("total_amount".localized)
                 .font(.headline)
                 .foregroundColor(.secondary)
             
-            Text("$\(String(format: "%.2f", calculation.totalAmount))")
+            Text("\(calculation.effectiveCurrency.symbol)\(String(format: "%.2f", calculation.totalAmount))")
                 .font(.system(size: 48, weight: .bold, design: .rounded))
                 .foregroundColor(.blue)
             
-            Text("Calculated on \(calculation.timestamp, style: .date) at \(calculation.timestamp, style: .time)")
+            Text("\("tip_date".localized): \(calculation.timestamp, style: .date) \(calculation.timestamp, style: .time)")
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
