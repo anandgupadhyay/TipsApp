@@ -1,6 +1,6 @@
 //
 //  SplashScreenView.swift
-//  TipsApp
+//  Tips App
 //
 //  Created by Anand Upadhyay on 28/06/25.
 //
@@ -36,7 +36,7 @@ struct SplashScreenView: View {
                 
                 // App Name
                 VStack(spacing: 8) {
-                    Text("TipsApp")
+                    Text("app_name".localized)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.white)

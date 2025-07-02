@@ -1,6 +1,6 @@
-# TipsApp – SwiftUI Learning Project
+# Tips App – SwiftUI Learning Project
 
-TipsApp is a modern, open-source tip calculator built with SwiftUI and SwiftData. It is designed as a learning project for developers who want to explore best practices in SwiftUI, data persistence, and app architecture.
+Tips App is a modern, open-source tip calculator built with SwiftUI and SwiftData. It is designed as a learning project for developers who want to explore best practices in SwiftUI, data persistence, and app architecture.
 
 ## Features
 

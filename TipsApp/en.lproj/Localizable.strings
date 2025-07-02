@@ -1,6 +1,6 @@
 // MARK: - General
 /* App name shown on the splash screen and elsewhere */
-"app_name" = "TipsApp";
+"app_name" = "Tips App";
 /* Button label for finishing an action */
 "done" = "Done";
 /* Button label for cancelling an action */

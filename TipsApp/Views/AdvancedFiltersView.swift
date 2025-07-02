@@ -1,6 +1,6 @@
 //
 //  AdvancedFiltersView.swift
-//  TipsApp
+//  Tips App
 //
 //  Created by Anand Upadhyay on 28/06/25.
 //
