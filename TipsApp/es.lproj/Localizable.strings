@@ -1,124 +1,227 @@
 // MARK: - General
+/* App name shown on the splash screen and elsewhere */
 "app_name" = "TipsApp";
+/* Button label for finishing an action */
 "done" = "Hecho";
+/* Button label for cancelling an action */
 "cancel" = "Cancelar";
+/* Button label for saving data */
 "save" = "Guardar";
+/* Button label for editing data */
 "edit" = "Editar";
+/* Button label for deleting data */
 "delete" = "Eliminar";
+/* Button label for sharing data */
 "share" = "Compartir";
+/* Button label for confirming an action */
 "ok" = "OK";
+/* Button label for resetting a form */
 "reset" = "Restablecer";
 
 // MARK: - Calculator
+/* Title for the main tip calculator view */
 "tip_calculator" = "Calculadora de Propinas";
+/* Title for the smart tip calculator variant */
 "smart_tip_calculator" = "Calculadora de Propinas Inteligente";
+/* Description shown on the calculator screen */
 "calculate_tips_description" = "Calcula propinas basadas en la calidad del servicio y divide facturas fácilmente";
+/* Label for the bill amount input */
 "bill_amount" = "Monto de la Factura";
+/* Label for the tip percentage input */
 "tip_percentage" = "Porcentaje de Propina";
+/* Section header for quick tip buttons */
 "quick_tip_options" = "Opciones de Propina Rápida";
+/* Label for custom tip amount input */
 "custom_amount" = "Monto Personalizado";
+/* Placeholder for entering a custom amount */
 "enter_amount" = "Ingresa el monto";
+/* Label for service experience selection */
 "service_experience" = "Experiencia del Servicio";
+/* Label for number of people input */
 "number_of_people" = "Número de Personas";
+/* Label for payment method selection */
 "payment_method" = "Método de Pago";
+/* Section header for calculation results */
 "calculation_results" = "Resultados del Cálculo";
+/* Label for tip amount result */
 "tip_amount" = "Monto de la Propina";
+/* Label for total amount result */
 "total_amount" = "Monto Total";
+/* Label for per person result */
 "per_person" = "Por Persona";
+/* Label for notes section (optional) */
 "notes_optional" = "Notas (Opcional)";
+/* Placeholder for notes text field */
 "add_notes_placeholder" = "Agrega notas sobre el servicio...";
+/* Button label for adding a tip */
 "add_tip" = "Agregar Propina";
+/* Button label for updating a tip */
 "update_tip" = "Actualizar Propina";
 
 // MARK: - Experience
+/* Label for excellent service experience */
 "excellent" = "Excelente";
+/* Label for good service experience */
 "good" = "Bueno";
+/* Label for average service experience */
 "average" = "Promedio";
+/* Label for poor service experience */
 "poor" = "Malo";
 
 // MARK: - Payment Methods
+/* Payment method: cash */
 "cash" = "Efectivo";
+/* Payment method: credit card */
 "credit_card" = "Tarjeta de Crédito";
+/* Payment method: debit card */
 "debit_card" = "Tarjeta de Débito";
+/* Payment method: QR code */
 "qr_code" = "Código QR";
+/* Payment method: digital wallet */
 "digital_wallet" = "Billetera Digital";
 
 // MARK: - History
+/* Title for tip history view */
 "tip_history" = "Historial de Propinas";
+/* Placeholder for search bar in history */
 "search_calculations" = "Buscar cálculos...";
+/* Message when no calculations are found */
 "no_calculations_found" = "No Se Encontraron Cálculos";
+/* Description for empty history state */
 "calculations_history_description" = "Tus cálculos de propinas aparecerán aquí una vez que los guardes.";
+/* Button label to start calculating */
 "start_calculating" = "Comenzar a Calcular";
+/* Filter option: all */
 "filter_all" = "Todo";
+/* Filter option: today */
 "filter_today" = "Hoy";
+/* Filter option: this week */
 "filter_this_week" = "Esta Semana";
+/* Filter option: this month */
 "filter_this_month" = "Este Mes";
+/* Label for total tips paid summary */
 "total_tips_paid" = "Total de Propinas Pagadas";
 
 // MARK: - Success Alert
+/* Title for tip saved alert */
 "tip_saved" = "¡Propina Guardada!";
+/* Message for tip saved alert */
 "tip_saved_message" = "Tu propina ha sido guardada exitosamente. Puedes verla en el historial.";
+/* Button label to view history */
 "view_history" = "Ver Historial";
+/* Button label to start a new tip */
 "new_tip" = "Nueva Propina";
 
 // MARK: - Detail View
+/* Title for tip detail view */
 "calculation_details" = "Detalles del Cálculo";
+/* Section header for calculation breakdown */
 "calculation_breakdown" = "Desglose del Cálculo";
+/* Section header for service details */
 "service_details" = "Detalles del Servicio";
+/* Section header for payment information */
 "payment_information" = "Información de Pago";
+/* Label for custom tip amount in detail */
 "custom_tip_amount" = "Monto de Propina Personalizado";
+/* Label for service experience in detail */
 "service_experience_label" = "Experiencia del Servicio";
+/* Label for payment method in detail */
 "payment_method_label" = "Método de Pago";
+/* Label for split between people */
 "split_between" = "Dividido Entre";
+/* Singular for person */
 "person" = "persona";
+/* Plural for persons */
 "persons" = "personas";
+/* Button label for editing a tip */
 "edit_calculation" = "Editar Cálculo";
 
 // MARK: - Share
+/* Title for share calculation view */
 "share_calculation" = "Compartir Cálculo";
+/* Section header for share preview */
 "share_preview" = "Vista Previa del Compartir";
+/* Section header for share options */
 "share_options" = "Opciones de Compartir";
+/* Section header for export options */
 "export_options" = "Opciones de Exportar";
+/* Button label for copying to clipboard */
 "copy_to_clipboard" = "Copiar al Portapapeles";
+/* Subtitle for copy to clipboard option */
 "copy_calculation_details" = "Copiar detalles del cálculo";
+/* Button label for sharing via message */
 "share_via_message" = "Compartir via Mensaje";
+/* Subtitle for sharing via messages app */
 "send_via_messages_app" = "Enviar via app Mensajes";
+/* Button label for sharing via email */
 "share_via_email" = "Compartir via Email";
+/* Subtitle for sharing via mail app */
 "send_via_mail_app" = "Enviar via app Mail";
+/* Button label for sharing via social media */
 "share_via_social_media" = "Compartir via Redes Sociales";
+/* Subtitle for sharing on social platforms */
 "share_on_social_platforms" = "Compartir en plataformas sociales";
+/* Button label for exporting as PDF */
 "export_as_pdf" = "Exportar como PDF";
+/* Subtitle for creating a PDF document */
 "create_pdf_document" = "Crear documento PDF";
+/* Button label for exporting as CSV */
 "export_as_csv" = "Exportar como CSV";
+/* Subtitle for creating a CSV file */
 "create_csv_file" = "Crear archivo CSV";
+/* Button label for saving to Files */
 "save_to_files" = "Guardar en Archivos";
+/* Subtitle for saving to Files app */
 "save_to_files_app" = "Guardar en app Archivos";
 
 // MARK: - QR Scanner
+/* Title for QR scanner view */
 "qr_scanner" = "Escáner QR";
+/* Instruction for scanning QR code for payment */
 "scan_qr_payment" = "Escanear Código QR para Pago";
+/* Instruction for positioning QR code */
 "position_qr_frame" = "Posiciona el código QR dentro del marco";
+/* Label for scanned QR code */
 "scanned_code" = "Código Escaneado:";
+/* Button label for processing payment */
 "process_payment" = "Procesar Pago";
 
 // MARK: - Currency
+/* Label for currency selection */
 "currency" = "Moneda";
+/* Button label for selecting currency */
 "select_currency" = "Seleccionar Moneda";
+/* Name for US Dollar */
 "us_dollar" = "Dólar Estadounidense";
+/* Name for Euro */
 "euro" = "Euro";
+/* Name for British Pound */
 "british_pound" = "Libra Esterlina";
+/* Name for Indian Rupee */
 "indian_rupee" = "Rupia India";
+/* Name for Pakistani Rupee */
 "pakistani_rupee" = "Rupia Pakistaní";
+/* Name for Kenyan Shilling */
 "kenyan_shilling" = "Chelín Keniano";
+/* Name for Canadian Dollar */
 "canadian_dollar" = "Dólar Canadiense";
+/* Name for Australian Dollar */
 "australian_dollar" = "Dólar Australiano";
 
 // MARK: - Filter Options
+/* Filter option for currency */
 "filter_by_currency" = "Filtrar por Moneda";
+/* Filter option for tip amount */
 "filter_by_tip_amount" = "Filtrar por Monto de Propina";
+/* Filter option for experience */
 "filter_by_experience" = "Filtrar por Experiencia";
+/* Filter option for payment method */
 "filter_by_payment_method" = "Filtrar por Método de Pago";
+/* Filter option for date */
 "filter_by_date" = "Filtrar por Fecha";
+/* Filter for low tip percentage */
 "low_tip" = "Propina Baja (< 10%)";
+/* Filter for medium tip percentage */
 "medium_tip" = "Propina Media (10-20%)";
+/* Filter for high tip percentage */
 "high_tip" = "Propina Alta (> 20%)"; 

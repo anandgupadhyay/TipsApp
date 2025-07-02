@@ -83,17 +83,17 @@ struct EditTipCalculationView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Edit Calculation")
+            .navigationTitle("edit_calculation".localized)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
+                    Button("cancel".localized) {
                         dismiss()
                     }
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Update Tip") {
+                    Button("update_tip".localized) {
                         saveChanges()
                     }
                     .disabled(billAmount.isEmpty || Double(billAmount) == 0)
@@ -318,16 +318,16 @@ struct EditTipCalculationView: View {
     
     private var notesSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Notes")
+            Text("notes_optional".localized)
                 .font(.headline)
             
-            TextField("Add any notes about the service...", text: $notes, axis: .vertical)
+            TextField("add_notes_placeholder".localized, text: $notes, axis: .vertical)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .lineLimit(3...6)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
-                        Button("Done") {
+                        Button("done".localized) {
                             hideKeyboard()
                         }
                     }

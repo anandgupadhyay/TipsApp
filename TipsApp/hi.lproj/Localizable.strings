@@ -1,124 +1,227 @@
 // MARK: - General
+/* App name shown on the splash screen and elsewhere */
 "app_name" = "TipsApp";
+/* Button label for finishing an action */
 "done" = "हो गया";
+/* Button label for cancelling an action */
 "cancel" = "रद्द करें";
+/* Button label for saving data */
 "save" = "सहेजें";
+/* Button label for editing data */
 "edit" = "संपादित करें";
+/* Button label for deleting data */
 "delete" = "हटाएं";
+/* Button label for sharing data */
 "share" = "साझा करें";
+/* Button label for confirming an action */
 "ok" = "ठीक है";
+/* Button label for resetting a form */
 "reset" = "रीसेट करें";
 
 // MARK: - Calculator
+/* Title for the main tip calculator view */
 "tip_calculator" = "टिप कैलकुलेटर";
+/* Title for the smart tip calculator variant */
 "smart_tip_calculator" = "स्मार्ट टिप कैलकुलेटर";
+/* Description shown on the calculator screen */
 "calculate_tips_description" = "सेवा की गुणवत्ता के आधार पर टिप की गणना करें और बिल को आसानी से बांटें";
+/* Label for the bill amount input */
 "bill_amount" = "बिल की राशि";
+/* Label for the tip percentage input */
 "tip_percentage" = "टिप का प्रतिशत";
+/* Section header for quick tip buttons */
 "quick_tip_options" = "त्वरित टिप विकल्प";
+/* Label for custom tip amount input */
 "custom_amount" = "कस्टम राशि";
+/* Placeholder for entering a custom amount */
 "enter_amount" = "राशि दर्ज करें";
+/* Label for service experience selection */
 "service_experience" = "सेवा का अनुभव";
+/* Label for number of people input */
 "number_of_people" = "लोगों की संख्या";
+/* Label for payment method selection */
 "payment_method" = "भुगतान का तरीका";
+/* Section header for calculation results */
 "calculation_results" = "गणना के परिणाम";
+/* Label for tip amount result */
 "tip_amount" = "टिप की राशि";
+/* Label for total amount result */
 "total_amount" = "कुल राशि";
+/* Label for per person result */
 "per_person" = "प्रति व्यक्ति";
+/* Label for notes section (optional) */
 "notes_optional" = "नोट्स (वैकल्पिक)";
+/* Placeholder for notes text field */
 "add_notes_placeholder" = "सेवा के बारे में नोट्स जोड़ें...";
+/* Button label for adding a tip */
 "add_tip" = "टिप जोड़ें";
+/* Button label for updating a tip */
 "update_tip" = "टिप अपडेट करें";
 
 // MARK: - Experience
+/* Label for excellent service experience */
 "excellent" = "उत्कृष्ट";
+/* Label for good service experience */
 "good" = "अच्छा";
+/* Label for average service experience */
 "average" = "औसत";
+/* Label for poor service experience */
 "poor" = "खराब";
 
 // MARK: - Payment Methods
+/* Payment method: cash */
 "cash" = "नकद";
+/* Payment method: credit card */
 "credit_card" = "क्रेडिट कार्ड";
+/* Payment method: debit card */
 "debit_card" = "डेबिट कार्ड";
+/* Payment method: QR code */
 "qr_code" = "QR कोड";
+/* Payment method: digital wallet */
 "digital_wallet" = "डिजिटल वॉलेट";
 
 // MARK: - History
+/* Title for tip history view */
 "tip_history" = "टिप का इतिहास";
+/* Placeholder for search bar in history */
 "search_calculations" = "गणनाएं खोजें...";
+/* Message when no calculations are found */
 "no_calculations_found" = "कोई गणना नहीं मिली";
+/* Description for empty history state */
 "calculations_history_description" = "आपकी टिप गणनाएं यहां दिखाई देंगी जब आप उन्हें सहेजेंगे।";
+/* Button label to start calculating */
 "start_calculating" = "गणना शुरू करें";
+/* Filter option: all */
 "filter_all" = "सभी";
+/* Filter option: today */
 "filter_today" = "आज";
+/* Filter option: this week */
 "filter_this_week" = "इस सप्ताह";
+/* Filter option: this month */
 "filter_this_month" = "इस महीने";
+/* Label for total tips paid summary */
 "total_tips_paid" = "कुल टिप भुगतान";
 
 // MARK: - Success Alert
+/* Title for tip saved alert */
 "tip_saved" = "टिप सहेजा गया!";
+/* Message for tip saved alert */
 "tip_saved_message" = "आपकी टिप सफलतापूर्वक सहेजी गई है। आप इसे इतिहास में देख सकते हैं।";
+/* Button label to view history */
 "view_history" = "इतिहास देखें";
+/* Button label to start a new tip */
 "new_tip" = "नई टिप";
 
 // MARK: - Detail View
+/* Title for tip detail view */
 "calculation_details" = "गणना का विवरण";
+/* Section header for calculation breakdown */
 "calculation_breakdown" = "गणना का विभाजन";
+/* Section header for service details */
 "service_details" = "सेवा का विवरण";
+/* Section header for payment information */
 "payment_information" = "भुगतान की जानकारी";
+/* Label for custom tip amount in detail */
 "custom_tip_amount" = "कस्टम टिप राशि";
+/* Label for service experience in detail */
 "service_experience_label" = "सेवा का अनुभव";
+/* Label for payment method in detail */
 "payment_method_label" = "भुगतान का तरीका";
+/* Label for split between people */
 "split_between" = "बीच में बांटा गया";
+/* Singular for person */
 "person" = "व्यक्ति";
+/* Plural for persons */
 "persons" = "लोग";
+/* Button label for editing a tip */
 "edit_calculation" = "गणना संपादित करें";
 
 // MARK: - Share
+/* Title for share calculation view */
 "share_calculation" = "गणना साझा करें";
+/* Section header for share preview */
 "share_preview" = "साझा करने का पूर्वावलोकन";
+/* Section header for share options */
 "share_options" = "साझा करने के विकल्प";
+/* Section header for export options */
 "export_options" = "निर्यात के विकल्प";
+/* Button label for copying to clipboard */
 "copy_to_clipboard" = "क्लिपबोर्ड पर कॉपी करें";
+/* Subtitle for copy to clipboard option */
 "copy_calculation_details" = "गणना का विवरण कॉपी करें";
+/* Button label for sharing via message */
 "share_via_message" = "संदेश के माध्यम से साझा करें";
+/* Subtitle for sharing via messages app */
 "send_via_messages_app" = "संदेश ऐप के माध्यम से भेजें";
+/* Button label for sharing via email */
 "share_via_email" = "ईमेल के माध्यम से साझा करें";
+/* Subtitle for sharing via mail app */
 "send_via_mail_app" = "मेल ऐप के माध्यम से भेजें";
+/* Button label for sharing via social media */
 "share_via_social_media" = "सोशल मीडिया के माध्यम से साझा करें";
+/* Subtitle for sharing on social platforms */
 "share_on_social_platforms" = "सोशल प्लेटफॉर्म पर साझा करें";
+/* Button label for exporting as PDF */
 "export_as_pdf" = "PDF के रूप में निर्यात करें";
+/* Subtitle for creating a PDF document */
 "create_pdf_document" = "PDF दस्तावेज़ बनाएं";
+/* Button label for exporting as CSV */
 "export_as_csv" = "CSV के रूप में निर्यात करें";
+/* Subtitle for creating a CSV file */
 "create_csv_file" = "CSV फ़ाइल बनाएं";
+/* Button label for saving to Files */
 "save_to_files" = "फ़ाइलों में सहेजें";
+/* Subtitle for saving to Files app */
 "save_to_files_app" = "फ़ाइल ऐप में सहेजें";
 
 // MARK: - QR Scanner
+/* Title for QR scanner view */
 "qr_scanner" = "QR स्कैनर";
+/* Instruction for scanning QR code for payment */
 "scan_qr_payment" = "भुगतान के लिए QR कोड स्कैन करें";
+/* Instruction for positioning QR code */
 "position_qr_frame" = "QR कोड को फ्रेम के अंदर रखें";
+/* Label for scanned QR code */
 "scanned_code" = "स्कैन किया गया कोड:";
+/* Button label for processing payment */
 "process_payment" = "भुगतान प्रक्रिया करें";
 
 // MARK: - Currency
+/* Label for currency selection */
 "currency" = "मुद्रा";
+/* Button label for selecting currency */
 "select_currency" = "मुद्रा चुनें";
+/* Name for US Dollar */
 "us_dollar" = "अमेरिकी डॉलर";
+/* Name for Euro */
 "euro" = "यूरो";
+/* Name for British Pound */
 "british_pound" = "ब्रिटिश पाउंड";
+/* Name for Indian Rupee */
 "indian_rupee" = "भारतीय रुपया";
+/* Name for Pakistani Rupee */
 "pakistani_rupee" = "पाकिस्तानी रुपया";
+/* Name for Kenyan Shilling */
 "kenyan_shilling" = "केन्याई शिलिंग";
+/* Name for Canadian Dollar */
 "canadian_dollar" = "कनाडाई डॉलर";
+/* Name for Australian Dollar */
 "australian_dollar" = "ऑस्ट्रेलियाई डॉलर";
 
 // MARK: - Filter Options
+/* Filter option for currency */
 "filter_by_currency" = "मुद्रा के अनुसार फ़िल्टर करें";
+/* Filter option for tip amount */
 "filter_by_tip_amount" = "टिप राशि के अनुसार फ़िल्टर करें";
+/* Filter option for experience */
 "filter_by_experience" = "अनुभव के अनुसार फ़िल्टर करें";
+/* Filter option for payment method */
 "filter_by_payment_method" = "भुगतान के तरीके के अनुसार फ़िल्टर करें";
+/* Filter option for date */
 "filter_by_date" = "तिथि के अनुसार फ़िल्टर करें";
+/* Filter for low tip percentage */
 "low_tip" = "कम टिप (< 10%)";
+/* Filter for medium tip percentage */
 "medium_tip" = "मध्यम टिप (10-20%)";
+/* Filter for high tip percentage */
 "high_tip" = "उच्च टिप (> 20%)"; 

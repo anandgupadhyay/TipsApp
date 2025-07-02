@@ -1,124 +1,227 @@
 // MARK: - General
+/* App name shown on the splash screen and elsewhere */
 "app_name" = "TipsApp";
+/* Button label for finishing an action */
 "done" = "Terminé";
+/* Button label for cancelling an action */
 "cancel" = "Annuler";
+/* Button label for saving data */
 "save" = "Enregistrer";
+/* Button label for editing data */
 "edit" = "Modifier";
+/* Button label for deleting data */
 "delete" = "Supprimer";
+/* Button label for sharing data */
 "share" = "Partager";
+/* Button label for confirming an action */
 "ok" = "OK";
+/* Button label for resetting a form */
 "reset" = "Réinitialiser";
 
 // MARK: - Calculator
+/* Title for the main tip calculator view */
 "tip_calculator" = "Calculateur de Pourboire";
+/* Title for the smart tip calculator variant */
 "smart_tip_calculator" = "Calculateur de Pourboire Intelligent";
+/* Description shown on the calculator screen */
 "calculate_tips_description" = "Calculez les pourboires selon la qualité du service et divisez facilement les factures";
+/* Label for the bill amount input */
 "bill_amount" = "Montant de la Facture";
+/* Label for the tip percentage input */
 "tip_percentage" = "Pourcentage de Pourboire";
+/* Section header for quick tip buttons */
 "quick_tip_options" = "Options de Pourboire Rapide";
+/* Label for custom tip amount input */
 "custom_amount" = "Montant Personnalisé";
+/* Placeholder for entering a custom amount */
 "enter_amount" = "Entrez le montant";
+/* Label for service experience selection */
 "service_experience" = "Expérience de Service";
+/* Label for number of people input */
 "number_of_people" = "Nombre de Personnes";
+/* Label for payment method selection */
 "payment_method" = "Méthode de Paiement";
+/* Section header for calculation results */
 "calculation_results" = "Résultats du Calcul";
+/* Label for tip amount result */
 "tip_amount" = "Montant du Pourboire";
+/* Label for total amount result */
 "total_amount" = "Montant Total";
+/* Label for per person result */
 "per_person" = "Par Personne";
+/* Label for notes section (optional) */
 "notes_optional" = "Notes (Optionnel)";
+/* Placeholder for notes text field */
 "add_notes_placeholder" = "Ajoutez des notes sur le service...";
+/* Button label for adding a tip */
 "add_tip" = "Ajouter un Pourboire";
+/* Button label for updating a tip */
 "update_tip" = "Mettre à Jour le Pourboire";
 
 // MARK: - Experience
+/* Label for excellent service experience */
 "excellent" = "Excellent";
+/* Label for good service experience */
 "good" = "Bon";
+/* Label for average service experience */
 "average" = "Moyen";
+/* Label for poor service experience */
 "poor" = "Mauvais";
 
 // MARK: - Payment Methods
+/* Payment method: cash */
 "cash" = "Espèces";
+/* Payment method: credit card */
 "credit_card" = "Carte de Crédit";
+/* Payment method: debit card */
 "debit_card" = "Carte de Débit";
+/* Payment method: QR code */
 "qr_code" = "Code QR";
+/* Payment method: digital wallet */
 "digital_wallet" = "Portefeuille Numérique";
 
 // MARK: - History
+/* Title for tip history view */
 "tip_history" = "Historique des Pourboires";
+/* Placeholder for search bar in history */
 "search_calculations" = "Rechercher des calculs...";
+/* Message when no calculations are found */
 "no_calculations_found" = "Aucun Calcul Trouvé";
+/* Description for empty history state */
 "calculations_history_description" = "Vos calculs de pourboire apparaîtront ici une fois sauvegardés.";
+/* Button label to start calculating */
 "start_calculating" = "Commencer à Calculer";
+/* Filter option: all */
 "filter_all" = "Tout";
+/* Filter option: today */
 "filter_today" = "Aujourd'hui";
+/* Filter option: this week */
 "filter_this_week" = "Cette Semaine";
+/* Filter option: this month */
 "filter_this_month" = "Ce Mois";
+/* Label for total tips paid summary */
 "total_tips_paid" = "Total des Pourboires Payés";
 
 // MARK: - Success Alert
+/* Title for tip saved alert */
 "tip_saved" = "Pourboire Sauvegardé !";
+/* Message for tip saved alert */
 "tip_saved_message" = "Votre pourboire a été sauvegardé avec succès. Vous pouvez le voir dans l'historique.";
+/* Button label to view history */
 "view_history" = "Voir l'Historique";
+/* Button label to start a new tip */
 "new_tip" = "Nouveau Pourboire";
 
 // MARK: - Detail View
+/* Title for tip detail view */
 "calculation_details" = "Détails du Calcul";
+/* Section header for calculation breakdown */
 "calculation_breakdown" = "Détail du Calcul";
+/* Section header for service details */
 "service_details" = "Détails du Service";
+/* Section header for payment information */
 "payment_information" = "Informations de Paiement";
+/* Label for custom tip amount in detail */
 "custom_tip_amount" = "Montant de Pourboire Personnalisé";
+/* Label for service experience in detail */
 "service_experience_label" = "Expérience de Service";
+/* Label for payment method in detail */
 "payment_method_label" = "Méthode de Paiement";
+/* Label for split between people */
 "split_between" = "Divisé Entre";
+/* Singular for person */
 "person" = "personne";
+/* Plural for persons */
 "persons" = "personnes";
+/* Button label for editing a tip */
 "edit_calculation" = "Modifier le Calcul";
 
 // MARK: - Share
+/* Title for share calculation view */
 "share_calculation" = "Partager le Calcul";
+/* Section header for share preview */
 "share_preview" = "Aperçu du Partage";
+/* Section header for share options */
 "share_options" = "Options de Partage";
+/* Section header for export options */
 "export_options" = "Options d'Export";
+/* Button label for copying to clipboard */
 "copy_to_clipboard" = "Copier dans le Presse-papiers";
+/* Subtitle for copy to clipboard option */
 "copy_calculation_details" = "Copier les détails du calcul";
+/* Button label for sharing via message */
 "share_via_message" = "Partager via Message";
+/* Subtitle for sharing via messages app */
 "send_via_messages_app" = "Envoyer via l'app Messages";
+/* Button label for sharing via email */
 "share_via_email" = "Partager via Email";
+/* Subtitle for sharing via mail app */
 "send_via_mail_app" = "Envoyer via l'app Mail";
+/* Button label for sharing via social media */
 "share_via_social_media" = "Partager via Réseaux Sociaux";
+/* Subtitle for sharing on social platforms */
 "share_on_social_platforms" = "Partager sur les plateformes sociales";
+/* Button label for exporting as PDF */
 "export_as_pdf" = "Exporter en PDF";
+/* Subtitle for creating a PDF document */
 "create_pdf_document" = "Créer un document PDF";
+/* Button label for exporting as CSV */
 "export_as_csv" = "Exporter en CSV";
+/* Subtitle for creating a CSV file */
 "create_csv_file" = "Créer un fichier CSV";
+/* Button label for saving to Files */
 "save_to_files" = "Sauvegarder dans Fichiers";
+/* Subtitle for saving to Files app */
 "save_to_files_app" = "Sauvegarder dans l'app Fichiers";
 
 // MARK: - QR Scanner
+/* Title for QR scanner view */
 "qr_scanner" = "Scanner QR";
+/* Instruction for scanning QR code for payment */
 "scan_qr_payment" = "Scanner le Code QR pour le Paiement";
+/* Instruction for positioning QR code */
 "position_qr_frame" = "Positionnez le code QR dans le cadre";
+/* Label for scanned QR code */
 "scanned_code" = "Code Scanné :";
+/* Button label for processing payment */
 "process_payment" = "Traiter le Paiement";
 
 // MARK: - Currency
+/* Label for currency selection */
 "currency" = "Devise";
+/* Button label for selecting currency */
 "select_currency" = "Sélectionner la Devise";
+/* Name for US Dollar */
 "us_dollar" = "Dollar US";
+/* Name for Euro */
 "euro" = "Euro";
+/* Name for British Pound */
 "british_pound" = "Livre Sterling";
+/* Name for Indian Rupee */
 "indian_rupee" = "Roupie Indienne";
+/* Name for Pakistani Rupee */
 "pakistani_rupee" = "Roupie Pakistanaise";
+/* Name for Kenyan Shilling */
 "kenyan_shilling" = "Shilling Kenyan";
+/* Name for Canadian Dollar */
 "canadian_dollar" = "Dollar Canadien";
+/* Name for Australian Dollar */
 "australian_dollar" = "Dollar Australien";
 
 // MARK: - Filter Options
+/* Filter option for currency */
 "filter_by_currency" = "Filtrer par Devise";
+/* Filter option for tip amount */
 "filter_by_tip_amount" = "Filtrer par Montant de Pourboire";
+/* Filter option for experience */
 "filter_by_experience" = "Filtrer par Expérience";
+/* Filter option for payment method */
 "filter_by_payment_method" = "Filtrer par Méthode de Paiement";
+/* Filter option for date */
 "filter_by_date" = "Filtrer par Date";
+/* Filter for low tip percentage */
 "low_tip" = "Petit Pourboire (< 10%)";
+/* Filter for medium tip percentage */
 "medium_tip" = "Pourboire Moyen (10-20%)";
+/* Filter for high tip percentage */
 "high_tip" = "Gros Pourboire (> 20%)"; 

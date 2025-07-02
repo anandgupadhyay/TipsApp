@@ -1,124 +1,227 @@
 // MARK: - General
+/* App name shown on the splash screen and elsewhere */
 "app_name" = "TipsApp";
+/* Button label for finishing an action */
 "done" = "Done";
+/* Button label for cancelling an action */
 "cancel" = "Cancel";
+/* Button label for saving data */
 "save" = "Save";
+/* Button label for editing data */
 "edit" = "Edit";
+/* Button label for deleting data */
 "delete" = "Delete";
+/* Button label for sharing data */
 "share" = "Share";
+/* Button label for confirming an action */
 "ok" = "OK";
+/* Button label for resetting a form */
 "reset" = "Reset";
 
 // MARK: - Calculator
+/* Title for the main tip calculator view */
 "tip_calculator" = "Tip Calculator";
+/* Title for the smart tip calculator variant */
 "smart_tip_calculator" = "Smart Tip Calculator";
+/* Description shown on the calculator screen */
 "calculate_tips_description" = "Calculate tips based on service quality and split bills easily";
+/* Label for the bill amount input */
 "bill_amount" = "Bill Amount";
+/* Label for the tip percentage input */
 "tip_percentage" = "Tip Percentage";
+/* Section header for quick tip buttons */
 "quick_tip_options" = "Quick Tip Options";
+/* Label for custom tip amount input */
 "custom_amount" = "Custom Amount";
+/* Placeholder for entering a custom amount */
 "enter_amount" = "Enter amount";
+/* Label for service experience selection */
 "service_experience" = "Service Experience";
+/* Label for number of people input */
 "number_of_people" = "Number of People";
+/* Label for payment method selection */
 "payment_method" = "Payment Method";
+/* Section header for calculation results */
 "calculation_results" = "Calculation Results";
+/* Label for tip amount result */
 "tip_amount" = "Tip Amount";
+/* Label for total amount result */
 "total_amount" = "Total Amount";
+/* Label for per person result */
 "per_person" = "Per Person";
+/* Label for notes section (optional) */
 "notes_optional" = "Notes (Optional)";
+/* Placeholder for notes text field */
 "add_notes_placeholder" = "Add any notes about the service...";
+/* Button label for adding a tip */
 "add_tip" = "Add Tip";
+/* Button label for updating a tip */
 "update_tip" = "Update Tip";
 
 // MARK: - Experience
+/* Label for excellent service experience */
 "excellent" = "Excellent";
+/* Label for good service experience */
 "good" = "Good";
+/* Label for average service experience */
 "average" = "Average";
+/* Label for poor service experience */
 "poor" = "Poor";
 
 // MARK: - Payment Methods
+/* Payment method: cash */
 "cash" = "Cash";
+/* Payment method: credit card */
 "credit_card" = "Credit Card";
+/* Payment method: debit card */
 "debit_card" = "Debit Card";
+/* Payment method: QR code */
 "qr_code" = "QR Code";
+/* Payment method: digital wallet */
 "digital_wallet" = "Digital Wallet";
 
 // MARK: - History
+/* Title for tip history view */
 "tip_history" = "Tip History";
+/* Placeholder for search bar in history */
 "search_calculations" = "Search calculations...";
+/* Message when no calculations are found */
 "no_calculations_found" = "No Calculations Found";
+/* Description for empty history state */
 "calculations_history_description" = "Your tip calculations will appear here once you save them.";
+/* Button label to start calculating */
 "start_calculating" = "Start Calculating";
+/* Filter option: all */
 "filter_all" = "All";
+/* Filter option: today */
 "filter_today" = "Today";
+/* Filter option: this week */
 "filter_this_week" = "This Week";
+/* Filter option: this month */
 "filter_this_month" = "This Month";
+/* Label for total tips paid summary */
 "total_tips_paid" = "Total Tips Paid";
 
 // MARK: - Success Alert
+/* Title for tip saved alert */
 "tip_saved" = "Tip Saved!";
+/* Message for tip saved alert */
 "tip_saved_message" = "Your tip has been saved successfully. You can view it in the history.";
+/* Button label to view history */
 "view_history" = "View History";
+/* Button label to start a new tip */
 "new_tip" = "New Tip";
 
 // MARK: - Detail View
+/* Title for tip detail view */
 "calculation_details" = "Calculation Details";
+/* Section header for calculation breakdown */
 "calculation_breakdown" = "Calculation Breakdown";
+/* Section header for service details */
 "service_details" = "Service Details";
+/* Section header for payment information */
 "payment_information" = "Payment Information";
+/* Label for custom tip amount in detail */
 "custom_tip_amount" = "Custom Tip Amount";
+/* Label for service experience in detail */
 "service_experience_label" = "Service Experience";
+/* Label for payment method in detail */
 "payment_method_label" = "Payment Method";
+/* Label for split between people */
 "split_between" = "Split Between";
+/* Singular for person */
 "person" = "person";
+/* Plural for persons */
 "persons" = "persons";
+/* Button label for editing a tip */
 "edit_calculation" = "Edit Calculation";
 
 // MARK: - Share
+/* Title for share calculation view */
 "share_calculation" = "Share Calculation";
+/* Section header for share preview */
 "share_preview" = "Share Preview";
+/* Section header for share options */
 "share_options" = "Share Options";
+/* Section header for export options */
 "export_options" = "Export Options";
+/* Button label for copying to clipboard */
 "copy_to_clipboard" = "Copy to Clipboard";
+/* Subtitle for copy to clipboard option */
 "copy_calculation_details" = "Copy calculation details";
+/* Button label for sharing via message */
 "share_via_message" = "Share via Message";
+/* Subtitle for sharing via messages app */
 "send_via_messages_app" = "Send via Messages app";
+/* Button label for sharing via email */
 "share_via_email" = "Share via Email";
+/* Subtitle for sharing via mail app */
 "send_via_mail_app" = "Send via Mail app";
+/* Button label for sharing via social media */
 "share_via_social_media" = "Share via Social Media";
+/* Subtitle for sharing on social platforms */
 "share_on_social_platforms" = "Share on social platforms";
+/* Button label for exporting as PDF */
 "export_as_pdf" = "Export as PDF";
+/* Subtitle for creating a PDF document */
 "create_pdf_document" = "Create a PDF document";
+/* Button label for exporting as CSV */
 "export_as_csv" = "Export as CSV";
+/* Subtitle for creating a CSV file */
 "create_csv_file" = "Create a CSV file";
+/* Button label for saving to Files */
 "save_to_files" = "Save to Files";
+/* Subtitle for saving to Files app */
 "save_to_files_app" = "Save to Files app";
 
 // MARK: - QR Scanner
+/* Title for QR scanner view */
 "qr_scanner" = "QR Scanner";
+/* Instruction for scanning QR code for payment */
 "scan_qr_payment" = "Scan QR Code for Payment";
+/* Instruction for positioning QR code */
 "position_qr_frame" = "Position the QR code within the frame";
+/* Label for scanned QR code */
 "scanned_code" = "Scanned Code:";
+/* Button label for processing payment */
 "process_payment" = "Process Payment";
 
 // MARK: - Currency
+/* Label for currency selection */
 "currency" = "Currency";
+/* Button label for selecting currency */
 "select_currency" = "Select Currency";
+/* Name for US Dollar */
 "us_dollar" = "US Dollar";
+/* Name for Euro */
 "euro" = "Euro";
+/* Name for British Pound */
 "british_pound" = "British Pound";
+/* Name for Indian Rupee */
 "indian_rupee" = "Indian Rupee";
+/* Name for Pakistani Rupee */
 "pakistani_rupee" = "Pakistani Rupee";
+/* Name for Kenyan Shilling */
 "kenyan_shilling" = "Kenyan Shilling";
+/* Name for Canadian Dollar */
 "canadian_dollar" = "Canadian Dollar";
+/* Name for Australian Dollar */
 "australian_dollar" = "Australian Dollar";
 
 // MARK: - Filter Options
+/* Filter option for currency */
 "filter_by_currency" = "Filter by Currency";
+/* Filter option for tip amount */
 "filter_by_tip_amount" = "Filter by Tip Amount";
+/* Filter option for experience */
 "filter_by_experience" = "Filter by Experience";
+/* Filter option for payment method */
 "filter_by_payment_method" = "Filter by Payment Method";
+/* Filter option for date */
 "filter_by_date" = "Filter by Date";
+/* Filter for low tip percentage */
 "low_tip" = "Low Tip (< 10%)";
+/* Filter for medium tip percentage */
 "medium_tip" = "Medium Tip (10-20%)";
+/* Filter for high tip percentage */
 "high_tip" = "High Tip (> 20%)"; 
