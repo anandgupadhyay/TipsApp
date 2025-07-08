@@ -82,6 +82,14 @@ struct TipCalculatorView: View {
                 }
                 .padding()
             }
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("done".localized) {
+                        hideKeyboard()
+                    }
+                }
+            }
             .navigationTitle("app_name".localized)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
@@ -190,14 +198,6 @@ struct TipCalculatorView: View {
                     }
                 }
             )
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button("done".localized) {
-                        hideKeyboard()
-                    }
-                }
-            }
         }
     }
     
