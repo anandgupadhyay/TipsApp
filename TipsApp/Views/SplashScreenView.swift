@@ -25,14 +25,14 @@ struct SplashScreenView: View {
              
             VStack(spacing: 30) {
                 // App Icon
-                Image("iTunesArtwork")
+                Image("iTunesArtwork.png")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
+                    .frame(width: 40, height: 40)
                     .scaleEffect(iconScale)
                     .rotationEffect(.degrees(iconRotation))
                     .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 5)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
                 
                 // App Name
                 VStack(spacing: 8) {
@@ -59,7 +59,7 @@ struct SplashScreenView: View {
         .onAppear {
             startAnimation()
         }
-        .fullScreenCover(isPresented: $isActive){
+        .fullScreenCover(isPresented: $isActive) {
             ContentView()
         }
     }
