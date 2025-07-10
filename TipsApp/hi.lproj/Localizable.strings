@@ -224,4 +224,70 @@
 /* Filter for medium tip percentage */
 "medium_tip" = "मध्यम टिप (10-20%)";
 /* Filter for high tip percentage */
-"high_tip" = "उच्च टिप (> 20%)"; 
+"high_tip" = "उच्च टिप (> 20%)";
+
+// MARK: - Missing Localizations
+/* Title for tip detail view */
+"tip_detail" = "टिप का विवरण";
+/* Label for tip date */
+"tip_date" = "टिप की तिथि";
+/* Label for custom tip amount in edit view */
+"custom_tip_amount_optional" = "कस्टम टिप राशि (वैकल्पिक)";
+/* Placeholder for entering custom amount */
+"enter_custom_amount" = "कस्टम राशि दर्ज करें";
+/* Label for updated results section */
+"updated_results" = "अपडेट किए गए परिणाम";
+/* Label for bill amount in results */
+"bill_amount_result" = "बिल की राशि";
+/* Label for tip amount in results */
+"tip_amount_result" = "टिप की राशि";
+/* Label for total amount in results */
+"total_amount_result" = "कुल राशि";
+/* Label for per person in results */
+"per_person_result" = "प्रति व्यक्ति";
+/* Title for advanced filters view */
+"advanced_filters" = "उन्नत फ़िल्टर";
+/* Label for all currencies filter */
+"all_currencies" = "सभी मुद्राएं";
+/* Label for all experiences filter */
+"all_experiences" = "सभी अनुभव";
+/* Label for all payment methods filter */
+"all_payment_methods" = "सभी भुगतान के तरीके";
+/* Button label for clearing all filters */
+"clear_all_filters" = "सभी फ़िल्टर साफ़ करें";
+/* Title for share calculation view */
+"share_calculation_title" = "गणना साझा करें";
+/* Title for QR scanner view */
+"qr_scanner_title" = "QR स्कैनर";
+/* Instruction for scanning QR code */
+"scan_qr_payment" = "भुगतान के लिए QR कोड स्कैन करें";
+/* Instruction for positioning QR code */
+"position_qr_frame" = "QR कोड को फ्रेम के अंदर रखें";
+/* Label for scanned code */
+"scanned_code" = "स्कैन किया गया कोड:";
+/* Button label for canceling QR scan */
+"cancel_qr_scan" = "रद्द करें";
+/* Button label for processing payment */
+"process_payment" = "भुगतान प्रक्रिया करें";
+/* Error message for camera not available */
+"camera_not_available" = "कैमरा उपलब्ध नहीं है";
+/* Error message for camera input failure */
+"cannot_add_camera_input" = "कैमरा इनपुट जोड़ नहीं सकते";
+/* Error message for metadata output failure */
+"cannot_add_metadata_output" = "मेटाडेटा आउटपुट जोड़ नहीं सकते";
+/* Error message for camera session failure */
+"camera_session_failed" = "कैमरा सेशन शुरू करने में विफल";
+/* Error message for camera permission denied */
+"camera_permission_denied" = "कैमरा अनुमति अस्वीकृत। कृपया सेटिंग्स में इसे सक्षम करें।";
+/* Error message for camera input error */
+"camera_input_error" = "कैमरा इनपुट त्रुटि: %@";
+/* Title for smart tip calculator */
+"smart_tip_calculator_title" = "स्मार्ट टिप कैलकुलेटर";
+/* Label for quick tip option */
+"quick" = "त्वरित";
+/* Label for currency symbol */
+"currency_symbol" = "$";
+/* Label for percentage symbol */
+"percentage_symbol" = "%";
+/* Label for tip percentage display */
+"tip_percentage_display" = "% टिप";

@@ -104,11 +104,11 @@ struct EditTipCalculationView: View {
     
     private var billAmountSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Bill Amount")
+            Text("bill_amount".localized)
                 .font(.headline)
             
             HStack {
-                Text("$")
+                Text("currency_symbol".localized)
                     .font(.title2)
                     .foregroundColor(.secondary)
                 
@@ -117,12 +117,12 @@ struct EditTipCalculationView: View {
                     .keyboardType(.decimalPad)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Spacer()
-                            Button("Done") {
-                                hideKeyboard()
-                            }
+                                            ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("done".localized) {
+                            hideKeyboard()
                         }
+                    }
                     }
             }
         }
@@ -130,7 +130,7 @@ struct EditTipCalculationView: View {
     
     private var tipPercentageSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Tip Percentage")
+            Text("tip_percentage".localized)
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 12) {
@@ -139,7 +139,7 @@ struct EditTipCalculationView: View {
                         selectedTipPercentage = percentage
                         customTipAmount = ""
                     }) {
-                        Text("\(Int(percentage))%")
+                        Text("\(Int(percentage))\("percentage_symbol".localized)")
                             .font(.headline)
                             .foregroundColor(selectedTipPercentage == percentage ? .white : .primary)
                             .frame(maxWidth: .infinity)
@@ -156,7 +156,7 @@ struct EditTipCalculationView: View {
     
     private var experienceSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Service Experience")
+            Text("service_experience".localized)
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 12) {
@@ -174,7 +174,7 @@ struct EditTipCalculationView: View {
                                 Text(experience.rawValue)
                                     .font(.subheadline)
                                     .fontWeight(.medium)
-                                Text("\(Int(experience.tipPercentage))%")
+                                Text("\(Int(experience.tipPercentage))\("percentage_symbol".localized)")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                             }
@@ -199,7 +199,7 @@ struct EditTipCalculationView: View {
     
     private var numberOfPeopleSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Number of People")
+            Text("number_of_people".localized)
                 .font(.headline)
             
             HStack {
@@ -240,7 +240,7 @@ struct EditTipCalculationView: View {
     
     private var paymentMethodSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Payment Method")
+            Text("payment_method".localized)
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 12) {
@@ -276,16 +276,16 @@ struct EditTipCalculationView: View {
     
     private var customTipSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Custom Tip Amount (Optional)")
+            Text("custom_tip_amount_optional".localized)
                 .font(.headline)
             
-            TextField("Enter custom amount", text: $customTipAmount)
+            TextField("enter_custom_amount".localized, text: $customTipAmount)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.decimalPad)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
-                        Button("Done") {
+                        Button("done".localized) {
                             hideKeyboard()
                         }
                     }
@@ -295,17 +295,17 @@ struct EditTipCalculationView: View {
     
     private var resultsPreviewSection: some View {
         VStack(spacing: 16) {
-            Text("Updated Results")
+            Text("updated_results".localized)
                 .font(.headline)
             
             VStack(spacing: 12) {
-                ResultRow(title: "Bill Amount", value: "$\(String(format: "%.2f", Double(billAmount) ?? 0))")
-                ResultRow(title: "Tip Amount", value: "$\(String(format: "%.2f", calculatedTip))")
-                ResultRow(title: "Total Amount", value: "$\(String(format: "%.2f", calculatedTotal))")
+                ResultRow(title: "bill_amount_result".localized, value: "$\(String(format: "%.2f", Double(billAmount) ?? 0))")
+                ResultRow(title: "tip_amount_result".localized, value: "$\(String(format: "%.2f", calculatedTip))")
+                ResultRow(title: "total_amount_result".localized, value: "$\(String(format: "%.2f", calculatedTotal))")
                 
                 if numberOfPeople > 1 {
                     Divider()
-                    ResultRow(title: "Per Person", value: "$\(String(format: "%.2f", amountPerPerson))")
+                    ResultRow(title: "per_person_result".localized, value: "$\(String(format: "%.2f", amountPerPerson))")
                 }
             }
             .padding()

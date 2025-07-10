@@ -224,4 +224,70 @@
 /* Filter for medium tip percentage */
 "medium_tip" = "Pourboire Moyen (10-20%)";
 /* Filter for high tip percentage */
-"high_tip" = "Gros Pourboire (> 20%)"; 
+"high_tip" = "Gros Pourboire (> 20%)";
+
+// MARK: - Missing Localizations
+/* Title for tip detail view */
+"tip_detail" = "Détail du Pourboire";
+/* Label for tip date */
+"tip_date" = "Date du Pourboire";
+/* Label for custom tip amount in edit view */
+"custom_tip_amount_optional" = "Montant de Pourboire Personnalisé (Optionnel)";
+/* Placeholder for entering custom amount */
+"enter_custom_amount" = "Entrez le montant personnalisé";
+/* Label for updated results section */
+"updated_results" = "Résultats Mis à Jour";
+/* Label for bill amount in results */
+"bill_amount_result" = "Montant de la Facture";
+/* Label for tip amount in results */
+"tip_amount_result" = "Montant du Pourboire";
+/* Label for total amount in results */
+"total_amount_result" = "Montant Total";
+/* Label for per person in results */
+"per_person_result" = "Par Personne";
+/* Title for advanced filters view */
+"advanced_filters" = "Filtres Avancés";
+/* Label for all currencies filter */
+"all_currencies" = "Toutes les Devises";
+/* Label for all experiences filter */
+"all_experiences" = "Toutes les Expériences";
+/* Label for all payment methods filter */
+"all_payment_methods" = "Toutes les Méthodes de Paiement";
+/* Button label for clearing all filters */
+"clear_all_filters" = "Effacer Tous les Filtres";
+/* Title for share calculation view */
+"share_calculation_title" = "Partager le Calcul";
+/* Title for QR scanner view */
+"qr_scanner_title" = "Scanner QR";
+/* Instruction for scanning QR code */
+"scan_qr_payment" = "Scanner le Code QR pour le Paiement";
+/* Instruction for positioning QR code */
+"position_qr_frame" = "Positionnez le code QR dans le cadre";
+/* Label for scanned code */
+"scanned_code" = "Code Scanné :";
+/* Button label for canceling QR scan */
+"cancel_qr_scan" = "Annuler";
+/* Button label for processing payment */
+"process_payment" = "Traiter le Paiement";
+/* Error message for camera not available */
+"camera_not_available" = "Caméra non disponible";
+/* Error message for camera input failure */
+"cannot_add_camera_input" = "Impossible d'ajouter l'entrée de caméra";
+/* Error message for metadata output failure */
+"cannot_add_metadata_output" = "Impossible d'ajouter la sortie de métadonnées";
+/* Error message for camera session failure */
+"camera_session_failed" = "La session de caméra a échoué au démarrage";
+/* Error message for camera permission denied */
+"camera_permission_denied" = "Permission de caméra refusée. Veuillez l'activer dans les Paramètres.";
+/* Error message for camera input error */
+"camera_input_error" = "Erreur d'entrée de caméra : %@";
+/* Title for smart tip calculator */
+"smart_tip_calculator_title" = "Calculateur de Pourboires Intelligent";
+/* Label for quick tip option */
+"quick" = "Rapide";
+/* Label for currency symbol */
+"currency_symbol" = "$";
+/* Label for percentage symbol */
+"percentage_symbol" = "%";
+/* Label for tip percentage display */
+"tip_percentage_display" = "% pourboire";

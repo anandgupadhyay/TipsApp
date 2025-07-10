@@ -263,7 +263,7 @@ struct TipCalculationRowView: View {
                         .font(.headline)
                         .foregroundColor(.blue)
                     
-                    Text("\(Int(calculation.tipPercentage))% tip")
+                    Text("\(Int(calculation.tipPercentage))\("tip_percentage_display".localized)")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }

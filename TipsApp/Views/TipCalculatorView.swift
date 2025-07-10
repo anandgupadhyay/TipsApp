@@ -306,7 +306,7 @@ struct TipCalculatorView: View {
                             Text("\(selectedCurrency.symbol)\(Int(amount))")
                                 .font(.headline)
                                 .foregroundColor(.white)
-                            Text("Quick")
+                            Text("quick".localized)
                                 .font(.caption)
                                 .foregroundColor(.white.opacity(0.8))
                         }
@@ -351,7 +351,7 @@ struct TipCalculatorView: View {
                                 Text(experience.rawValue.localized)
                                     .font(.subheadline)
                                     .fontWeight(.medium)
-                                Text("\(Int(experience.tipPercentage))%")
+                                Text("\(Int(experience.tipPercentage))\("percentage_symbol".localized)")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                             }

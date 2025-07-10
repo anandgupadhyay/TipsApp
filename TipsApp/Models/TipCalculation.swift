@@ -82,66 +82,109 @@ enum Currency: String, CaseIterable, Codable {
     
     var name: String {
         switch self {
-        case .usd: return "US Dollar"
-        case .eur: return "Euro"
-        case .gbp: return "British Pound"
-        case .inr: return "Indian Rupee"
-        case .pkr: return "Pakistani Rupee"
-        case .kes: return "Kenyan Shilling"
-        case .cad: return "Canadian Dollar"
-        case .aud: return "Australian Dollar"
+        case .usd: return "us_dollar".localized
+        case .eur: return "euro".localized
+        case .gbp: return "british_pound".localized
+        case .inr: return "indian_rupee".localized
+        case .pkr: return "pakistani_rupee".localized
+        case .kes: return "kenyan_shilling".localized
+        case .cad: return "canadian_dollar".localized
+        case .aud: return "australian_dollar".localized
         }
     }
 }
 
 enum PaymentMethod: String, CaseIterable, Codable {
-    case cash = "Cash"
-    case creditCard = "Credit Card"
-    case debitCard = "Debit Card"
-    case qrCode = "QR Code"
-    case digitalWallet = "Digital Wallet"
+    // Old values for migration
+    case cashOld = "Cash"
+    case creditCardOld = "Credit Card"
+    case debitCardOld = "Debit Card"
+    case qrCodeOld = "QR Code"
+    case digitalWalletOld = "Digital Wallet"
+    // New values
+    case cash = "cash"
+    case creditCard = "credit_card"
+    case debitCard = "debit_card"
+    case qrCode = "qr_code"
+    case digitalWallet = "digital_wallet"
     
     var icon: String {
         switch self {
-        case .cash: return "banknote"
-        case .creditCard: return "creditcard"
-        case .debitCard: return "creditcard.fill"
-        case .qrCode: return "qrcode"
-        case .digitalWallet: return "iphone"
+        case .cash, .cashOld: return "banknote"
+        case .creditCard, .creditCardOld: return "creditcard"
+        case .debitCard, .debitCardOld: return "creditcard.fill"
+        case .qrCode, .qrCodeOld: return "qrcode"
+        case .digitalWallet, .digitalWalletOld: return "iphone"
         }
+    }
+    // Migration helper
+    var migrated: PaymentMethod {
+        switch self {
+        case .cashOld: return .cash
+        case .creditCardOld: return .creditCard
+        case .debitCardOld: return .debitCard
+        case .qrCodeOld: return .qrCode
+        case .digitalWalletOld: return .digitalWallet
+        default: return self
+        }
+    }
+    
+    static var displayCases: [PaymentMethod] {
+        return [.cash, .creditCard, .debitCard, .qrCode, .digitalWallet]
     }
 }
 
 enum Experience: String, CaseIterable, Codable {
-    case excellent = "Excellent"
-    case good = "Good"
-    case average = "Average"
-    case poor = "Poor"
-    
+    // Old values for migration
+    case excellentOld = "Excellent"
+    case goodOld = "Good"
+    case averageOld = "Average"
+    case poorOld = "Poor"
+    // New values
+    case excellent = "excellent"
+    case good = "good"
+    case average = "average"
+    case poor = "poor"
+
     var tipPercentage: Double {
         switch self {
-        case .excellent: return 20.0
-        case .good: return 15.0
-        case .average: return 10.0
-        case .poor: return 5.0
+        case .excellent, .excellentOld: return 20.0
+        case .good, .goodOld: return 15.0
+        case .average, .averageOld: return 10.0
+        case .poor, .poorOld: return 5.0
         }
     }
-    
+
     var color: Color {
         switch self {
-        case .excellent: return .green
-        case .good: return .blue
-        case .average: return .orange
-        case .poor: return .red
+        case .excellent, .excellentOld: return .green
+        case .good, .goodOld: return .blue
+        case .average, .averageOld: return .orange
+        case .poor, .poorOld: return .red
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .excellent, .excellentOld: return "star.fill"
+        case .good, .goodOld: return "star"
+        case .average, .averageOld: return "star.leadinghalf.filled"
+        case .poor, .poorOld: return "star.slash"
+        }
+    }
+
+    // Migration helper
+    var migrated: Experience {
+        switch self {
+        case .excellentOld: return .excellent
+        case .goodOld: return .good
+        case .averageOld: return .average
+        case .poorOld: return .poor
+        default: return self
         }
     }
     
-    var icon: String {
-        switch self {
-        case .excellent: return "star.fill"
-        case .good: return "star"
-        case .average: return "star.leadinghalf.filled"
-        case .poor: return "star.slash"
-        }
+    static var displayCases: [Experience] {
+        return [.excellent, .good, .average, .poor]
     }
 } 

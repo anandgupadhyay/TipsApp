@@ -127,7 +127,7 @@ struct TipCalculationDetailView: View {
                     
                     Spacer()
                     
-                    Text("\(Int(calculation.tipPercentage))%")
+                    Text("\(Int(calculation.tipPercentage))\("percentage_symbol".localized)")
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.blue)

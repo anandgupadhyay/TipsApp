@@ -37,19 +37,19 @@ struct QRScannerView: View {
                     
                     // Instructions
                     VStack(spacing: 16) {
-                        Text("Scan QR Code for Payment")
+                        Text("scan_qr_payment".localized)
                             .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                         
-                        Text("Position the QR code within the frame")
+                        Text("position_qr_frame".localized)
                             .font(.body)
                             .foregroundColor(.white.opacity(0.8))
                             .multilineTextAlignment(.center)
                         
                         if let scannedCode = scannerViewModel.scannedCode {
                             VStack(spacing: 8) {
-                                Text("Scanned Code:")
+                                Text("scanned_code".localized)
                                     .font(.headline)
                                     .foregroundColor(.white)
                                 
@@ -65,7 +65,7 @@ struct QRScannerView: View {
                         }
                         
                         HStack(spacing: 20) {
-                            Button("Cancel") {
+                            Button("cancel_qr_scan".localized) {
                                 dismiss()
                             }
                             .foregroundColor(.white)
@@ -76,7 +76,7 @@ struct QRScannerView: View {
                             )
                             
                             if scannerViewModel.scannedCode != nil {
-                                Button("Process Payment") {
+                                Button("process_payment".localized) {
                                     processPayment()
                                 }
                                 .foregroundColor(.white)
@@ -96,7 +96,7 @@ struct QRScannerView: View {
                     .padding()
                 }
             }
-            .navigationTitle("QR Scanner")
+            .navigationTitle("qr_scanner_title".localized)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
@@ -180,7 +180,7 @@ struct QRCodeScannerRepresentable: UIViewRepresentable {
         print("[QRScanner] Camera permission status: \(status.rawValue)")
         if status == .denied || status == .restricted {
             let errorLabel = UILabel()
-            errorLabel.text = "Camera permission denied. Please enable it in Settings."
+            errorLabel.text = "camera_permission_denied".localized
             errorLabel.textColor = .white
             errorLabel.backgroundColor = UIColor.red.withAlphaComponent(0.7)
             errorLabel.textAlignment = .center
@@ -195,7 +195,7 @@ struct QRCodeScannerRepresentable: UIViewRepresentable {
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
             print("[QRScanner] Camera not available")
-            showError(on: view, message: "Camera not available")
+            showError(on: view, message: "camera_not_available".localized)
             return view
         }
 
@@ -206,12 +206,12 @@ struct QRCodeScannerRepresentable: UIViewRepresentable {
                 print("[QRScanner] Camera input added")
             } else {
                 print("[QRScanner] Cannot add camera input")
-                showError(on: view, message: "Cannot add camera input")
+                showError(on: view, message: "cannot_add_camera_input".localized)
                 return view
             }
         } catch {
             print("[QRScanner] Camera input error: \(error.localizedDescription)")
-            showError(on: view, message: "Camera input error: \(error.localizedDescription)")
+            showError(on: view, message: String(format: "camera_input_error".localized, error.localizedDescription))
             return view
         }
 
@@ -223,7 +223,7 @@ struct QRCodeScannerRepresentable: UIViewRepresentable {
             print("[QRScanner] Metadata output added")
         } else {
             print("[QRScanner] Cannot add metadata output")
-            showError(on: view, message: "Cannot add metadata output")
+            showError(on: view, message: "cannot_add_metadata_output".localized)
             return view
         }
 
@@ -233,7 +233,7 @@ struct QRCodeScannerRepresentable: UIViewRepresentable {
             session.startRunning()
             print("[QRScanner] Session started: \(session.isRunning)")
             if !session.isRunning {
-                self.showError(on: view, message: "Camera session failed to start")
+                self.showError(on: view, message: "camera_session_failed".localized)
             }
         }
 

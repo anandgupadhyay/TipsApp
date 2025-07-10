@@ -41,7 +41,7 @@ struct SplashScreenView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     
-                    Text("Smart Tip Calculator")
+                    Text("smart_tip_calculator_title".localized)
                         .font(.title3)
                         .foregroundColor(.white.opacity(0.9))
                 }

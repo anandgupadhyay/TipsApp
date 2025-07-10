@@ -224,4 +224,70 @@
 /* Filter for medium tip percentage */
 "medium_tip" = "Medium Tip (10-20%)";
 /* Filter for high tip percentage */
-"high_tip" = "High Tip (> 20%)"; 
+"high_tip" = "High Tip (> 20%)";
+
+// MARK: - Missing Localizations
+/* Title for tip detail view */
+"tip_detail" = "Tip Detail";
+/* Label for tip date */
+"tip_date" = "Tip Date";
+/* Label for custom tip amount in edit view */
+"custom_tip_amount_optional" = "Custom Tip Amount (Optional)";
+/* Placeholder for entering custom amount */
+"enter_custom_amount" = "Enter custom amount";
+/* Label for updated results section */
+"updated_results" = "Updated Results";
+/* Label for bill amount in results */
+"bill_amount_result" = "Bill Amount";
+/* Label for tip amount in results */
+"tip_amount_result" = "Tip Amount";
+/* Label for total amount in results */
+"total_amount_result" = "Total Amount";
+/* Label for per person in results */
+"per_person_result" = "Per Person";
+/* Title for advanced filters view */
+"advanced_filters" = "Advanced Filters";
+/* Label for all currencies filter */
+"all_currencies" = "All Currencies";
+/* Label for all experiences filter */
+"all_experiences" = "All Experiences";
+/* Label for all payment methods filter */
+"all_payment_methods" = "All Payment Methods";
+/* Button label for clearing all filters */
+"clear_all_filters" = "Clear All Filters";
+/* Title for share calculation view */
+"share_calculation_title" = "Share Calculation";
+/* Title for QR scanner view */
+"qr_scanner_title" = "QR Scanner";
+/* Instruction for scanning QR code */
+"scan_qr_payment" = "Scan QR Code for Payment";
+/* Instruction for positioning QR code */
+"position_qr_frame" = "Position the QR code within the frame";
+/* Label for scanned code */
+"scanned_code" = "Scanned Code:";
+/* Button label for canceling QR scan */
+"cancel_qr_scan" = "Cancel";
+/* Button label for processing payment */
+"process_payment" = "Process Payment";
+/* Error message for camera not available */
+"camera_not_available" = "Camera not available";
+/* Error message for camera input failure */
+"cannot_add_camera_input" = "Cannot add camera input";
+/* Error message for metadata output failure */
+"cannot_add_metadata_output" = "Cannot add metadata output";
+/* Error message for camera session failure */
+"camera_session_failed" = "Camera session failed to start";
+/* Error message for camera permission denied */
+"camera_permission_denied" = "Camera permission denied. Please enable it in Settings.";
+/* Error message for camera input error */
+"camera_input_error" = "Camera input error: %@";
+/* Title for smart tip calculator */
+"smart_tip_calculator_title" = "Smart Tip Calculator";
+/* Label for quick tip option */
+"quick" = "Quick";
+/* Label for currency symbol */
+"currency_symbol" = "$";
+/* Label for percentage symbol */
+"percentage_symbol" = "%";
+/* Label for tip percentage display */
+"tip_percentage_display" = "% tip";

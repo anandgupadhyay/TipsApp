@@ -26,11 +26,11 @@ struct ShareTipCalculationView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Share Calculation")
+            .navigationTitle("share_calculation_title".localized)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") {
+                    Button("done".localized) {
                         dismiss()
                     }
                 }

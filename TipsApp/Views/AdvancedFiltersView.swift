@@ -20,7 +20,7 @@ struct AdvancedFiltersView: View {
                 // Currency Filter
                 Section(header: Text("filter_by_currency".localized)) {
                     Picker("Currency", selection: $selectedCurrencyFilter) {
-                        Text("All Currencies").tag(nil as Currency?)
+                        Text("all_currencies".localized).tag(nil as Currency?)
                         ForEach(Currency.allCases, id: \.self) { currency in
                             HStack {
                                 Text(currency.symbol)
@@ -44,8 +44,8 @@ struct AdvancedFiltersView: View {
                 // Experience Filter
                 Section(header: Text("filter_by_experience".localized)) {
                     Picker("Experience", selection: $selectedExperienceFilter) {
-                        Text("All Experiences").tag(nil as Experience?)
-                        ForEach(Experience.allCases, id: \.self) { experience in
+                        Text("all_experiences".localized).tag(nil as Experience?)
+                        ForEach(Experience.displayCases, id: \.self) { experience in
                             HStack {
                                 Image(systemName: experience.icon)
                                     .foregroundColor(experience.color)
@@ -59,8 +59,8 @@ struct AdvancedFiltersView: View {
                 // Payment Method Filter
                 Section(header: Text("filter_by_payment_method".localized)) {
                     Picker("Payment Method", selection: $selectedPaymentMethodFilter) {
-                        Text("All Payment Methods").tag(nil as PaymentMethod?)
-                        ForEach(PaymentMethod.allCases, id: \.self) { method in
+                        Text("all_payment_methods".localized).tag(nil as PaymentMethod?)
+                        ForEach(PaymentMethod.displayCases, id: \.self) { method in
                             HStack {
                                 Image(systemName: method.icon)
                                 Text(method.rawValue.localized)
@@ -75,13 +75,13 @@ struct AdvancedFiltersView: View {
                     Button(action: clearAllFilters) {
                         HStack {
                             Image(systemName: "trash")
-                            Text("Clear All Filters")
+                            Text("clear_all_filters".localized)
                         }
                         .foregroundColor(.red)
                     }
                 }
             }
-            .navigationTitle("Advanced Filters")
+            .navigationTitle("advanced_filters".localized)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
