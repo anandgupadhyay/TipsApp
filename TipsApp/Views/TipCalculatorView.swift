@@ -337,7 +337,7 @@ struct TipCalculatorView: View {
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 12) {
-                ForEach(Experience.allCases, id: \.self) { experience in
+                ForEach(Experience.displayCases, id: \.self) { experience in
                     Button(action: {
                         selectedExperience = experience
                         selectedTipPercentage = experience.tipPercentage
@@ -421,7 +421,7 @@ struct TipCalculatorView: View {
                 .font(.headline)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 12) {
-                ForEach(PaymentMethod.allCases, id: \.self) { method in
+                ForEach(PaymentMethod.displayCases, id: \.self) { method in
                     Button(action: {
                         selectedPaymentMethod = method
                         if method == .qrCode {
